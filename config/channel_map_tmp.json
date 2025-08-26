@@ -1,5 +1,5 @@
 {
- "time": "2025-08-26T10:49:21+0000",
+ "time": "2025-08-26T19:56:39+0000",
  "channelMap": [
   {
    "detectorSystem": "LYSO",
@@ -295,13 +295,13 @@
    "Enabled": true,
    "HV Power Supply": "---",
    "HV Channel": "---",
-   "Signal Converter Board": 12.0,
-   "SC Channel (1-5)": 1.0,
-   "Pentapus Cable ID": 12.0,
-   "Pentapus Cable Head Label": "J3",
-   "crateNum": 8.0,
-   "amcSlotNum": 5.0,
-   "channelNum": 0.0,
+   "Signal Converter Board": 9.0,
+   "SC Channel (1-5)": 2.0,
+   "Pentapus Cable ID": 9.0,
+   "Pentapus Cable Head Label": "J4",
+   "crateNum": 7.0,
+   "amcSlotNum": 11.0,
+   "channelNum": 1.0,
    "x": 0.0,
    "y": 0.0,
    "timeOffset": 0.0,
@@ -323,7 +323,7 @@
    "x": -9.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -341,7 +341,7 @@
    "x": -8.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -359,7 +359,7 @@
    "x": -7.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -377,7 +377,7 @@
    "x": -6.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -395,7 +395,7 @@
    "x": -5.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -413,7 +413,7 @@
    "x": -4.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -431,7 +431,7 @@
    "x": -3.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -449,7 +449,7 @@
    "x": -2.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -467,7 +467,7 @@
    "x": -1.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -485,7 +485,7 @@
    "x": -0.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -503,7 +503,7 @@
    "x": 0.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -521,7 +521,7 @@
    "x": 1.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -539,7 +539,7 @@
    "x": 2.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -557,7 +557,7 @@
    "x": 3.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -575,7 +575,7 @@
    "x": 4.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -593,7 +593,7 @@
    "x": 5.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -611,7 +611,7 @@
    "x": 6.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -629,7 +629,7 @@
    "x": 7.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -647,7 +647,7 @@
    "x": 8.5,
    "y": -10000000000.0,
    "timeOffset": 0.0,
-   "invert": true
+   "invert": false
   },
   {
    "detectorSystem": "HODO",
@@ -665,7 +665,7 @@
    "x": -10000000000.0,
    "y": 9.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -683,7 +683,7 @@
    "x": -10000000000.0,
    "y": 8.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -701,7 +701,7 @@
    "x": -10000000000.0,
    "y": 7.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -719,7 +719,7 @@
    "x": -10000000000.0,
    "y": 6.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -737,7 +737,7 @@
    "x": -10000000000.0,
    "y": 5.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -755,7 +755,7 @@
    "x": -10000000000.0,
    "y": 4.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -773,7 +773,7 @@
    "x": -10000000000.0,
    "y": 3.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -791,7 +791,7 @@
    "x": -10000000000.0,
    "y": 2.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -809,7 +809,7 @@
    "x": -10000000000.0,
    "y": 1.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -827,7 +827,7 @@
    "x": -10000000000.0,
    "y": 0.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -845,7 +845,7 @@
    "x": -10000000000.0,
    "y": -0.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -863,7 +863,7 @@
    "x": -10000000000.0,
    "y": -1.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -881,7 +881,7 @@
    "x": -10000000000.0,
    "y": -2.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -899,7 +899,7 @@
    "x": -10000000000.0,
    "y": -3.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -917,7 +917,7 @@
    "x": -10000000000.0,
    "y": -4.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -935,7 +935,7 @@
    "x": -10000000000.0,
    "y": -5.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -953,7 +953,7 @@
    "x": -10000000000.0,
    "y": -6.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -971,7 +971,7 @@
    "x": -10000000000.0,
    "y": -7.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   },
   {
    "detectorSystem": "HODO",
@@ -989,7 +989,7 @@
    "x": -10000000000.0,
    "y": -8.5,
    "timeOffset": 0.0,
-   "invert": false
+   "invert": true
   }
  ]
 }

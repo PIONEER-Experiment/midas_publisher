@@ -1,0 +1,39 @@
+{
+  "channelMap": [
+    { "crateNum": 1, "amcSlotNum": 2, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "X1", "x": -7 },
+    { "crateNum": 1, "amcSlotNum": 2, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "X2", "x": -6 },
+    { "crateNum": 1, "amcSlotNum": 2, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "X3", "x": -5 },
+    { "crateNum": 1, "amcSlotNum": 2, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "X4", "x": -4 },
+    { "crateNum": 1, "amcSlotNum": 2, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "X5", "x": -3 },
+
+    { "crateNum": 1, "amcSlotNum": 3, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "X6", "x": -2 },
+    { "crateNum": 1, "amcSlotNum": 3, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "X7", "x": -1 },
+    { "crateNum": 1, "amcSlotNum": 3, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "X8", "x": 0 },
+    { "crateNum": 1, "amcSlotNum": 3, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "X9", "x": 1 },
+    { "crateNum": 1, "amcSlotNum": 3, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "X10", "x": 2 },
+
+    { "crateNum": 1, "amcSlotNum": 4, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "X11", "x": 3 },
+    { "crateNum": 1, "amcSlotNum": 4, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "X12", "x": 4 },
+    { "crateNum": 1, "amcSlotNum": 4, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "X13", "x": 5 },
+    { "crateNum": 1, "amcSlotNum": 4, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "X14", "x": 6 },
+    { "crateNum": 1, "amcSlotNum": 4, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "X15", "x": 7 },
+
+    { "crateNum": 1, "amcSlotNum": 5, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "Y1", "y": -7 },
+    { "crateNum": 1, "amcSlotNum": 5, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "Y2", "y": -6 },
+    { "crateNum": 1, "amcSlotNum": 5, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "Y3", "y": -5 },
+    { "crateNum": 1, "amcSlotNum": 5, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "Y4", "y": -4 },
+    { "crateNum": 1, "amcSlotNum": 5, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "Y5", "y": -3 },
+
+    { "crateNum": 1, "amcSlotNum": 7, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "Y6", "y": -2 },
+    { "crateNum": 1, "amcSlotNum": 7, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "Y7", "y": -1 },
+    { "crateNum": 1, "amcSlotNum": 7, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "Y8", "y": 0 },
+    { "crateNum": 1, "amcSlotNum": 7, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "Y9", "y": 1 },
+    { "crateNum": 1, "amcSlotNum": 7, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "Y10", "y": 2 },
+
+    { "crateNum": 1, "amcSlotNum": 11, "channelNum": 0, "detectorSystem": "HODO", "subdetector": "Y11", "y": 3 },
+    { "crateNum": 1, "amcSlotNum": 11, "channelNum": 1, "detectorSystem": "HODO", "subdetector": "Y12", "y": 4 },
+    { "crateNum": 1, "amcSlotNum": 11, "channelNum": 2, "detectorSystem": "HODO", "subdetector": "Y13", "y": 5 },
+    { "crateNum": 1, "amcSlotNum": 11, "channelNum": 3, "detectorSystem": "HODO", "subdetector": "Y14", "y": 6 },
+    { "crateNum": 1, "amcSlotNum": 11, "channelNum": 4, "detectorSystem": "HODO", "subdetector": "Y15", "y": 7 }
+  ]
+}

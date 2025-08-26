@@ -89,7 +89,7 @@ set(midas_event_unpacker_plugin_OPTIONS
 )
 
 # ---------------------- mu-data-products ----------------------
-set(DataProducts_REPO "git@github.com:PIONEER-Experiment/mu-data-products.git")
+set(DataProducts_REPO "git@github-jaca230:PIONEER-Experiment/mu-data-products.git")
 set(DataProducts_TAG    "main")
 set(DataProducts_TARGET "") # Dynamically linked
 set(DataProducts_OPTIONS
@@ -97,7 +97,7 @@ set(DataProducts_OPTIONS
 )
 
 # ---------------------- mu-unpackers ----------------------
-set(Unpackers_REPO   "git@github.com:PIONEER-Experiment/mu-unpackers.git")
+set(Unpackers_REPO   "git@github-jaca230:PIONEER-Experiment/mu-unpackers.git")
 set(Unpackers_TAG    "main")
 set(Unpackers_TARGET "") # Dynamically linked
 set(Unpackers_OPTIONS
@@ -113,7 +113,7 @@ set(sbfoster_midas_event_unpacker_plugin_OPTIONS
 )
 
 # ---------------------- wfd5_pipeline_plugin ----------------------
-set(wfd5_pipeline_plugin_REPO   "jaca230/wfd5_pipeline_plugin")
+set(wfd5_pipeline_plugin_REPO   "KoljaFrahm/wfd5_pipeline_plugin")
 set(wfd5_pipeline_plugin_TAG    "psi_beamtime_2025")
 set(wfd5_pipeline_plugin_TARGET "") # Dynamically linked
 set(wfd5_pipeline_plugin_OPTIONS
