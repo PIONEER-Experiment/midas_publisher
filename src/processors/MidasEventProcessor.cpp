@@ -1,4 +1,3 @@
-// MidasEventProcessor.cpp
 #include "processors/MidasEventProcessor.h"
 #include <iostream>
 #include <stdexcept>
@@ -62,6 +61,7 @@ void MidasEventProcessor::Init(const json& midas_receiver_config,
 
     if (midas_event_processor_config.is_object()) {
         clearProductsOnNewRun_ = midas_event_processor_config.value("clear-products-on-new-run", true);
+        serializeEveryNEvents_ = midas_event_processor_config.value("serialize-every-n-events", 1);
 
         if (midas_event_processor_config.contains("tags_to_omit_from_clear") &&
             midas_event_processor_config["tags_to_omit_from_clear"].is_array()) {
@@ -150,27 +150,81 @@ std::vector<std::string> MidasEventProcessor::getProcessedOutput() {
     std::vector<std::string> out;
     if (!initialized_) return out;
 
+    auto overallStart = std::chrono::high_resolution_clock::now();
+
+    // 1. handleTransitions
+    auto transitionsStart = std::chrono::high_resolution_clock::now();
     handleTransitions();
+    auto transitionsEnd = std::chrono::high_resolution_clock::now();
+    auto transitionsDuration = std::chrono::duration_cast<std::chrono::microseconds>(transitionsEnd - transitionsStart).count();
+    spdlog::debug("[MidasEventProcessor] handleTransitions() took {} μs ({:.3f} ms)", transitionsDuration, transitionsDuration / 1000.0);
 
+    // 2. getLatestEvents
+    auto eventsStart = std::chrono::high_resolution_clock::now();
     auto timedEvents = midasReceiver_.getLatestEvents(numEventsPerRetrieval_, lastEventTimestamp_);
+    auto eventsEnd = std::chrono::high_resolution_clock::now();
+    auto eventsDuration = std::chrono::duration_cast<std::chrono::microseconds>(eventsEnd - eventsStart).count();
+    spdlog::debug("[MidasEventProcessor] getLatestEvents() retrieved {} event(s) in {} μs ({:.3f} ms)",
+                  timedEvents.size(), eventsDuration, eventsDuration / 1000.0);
 
-    for (auto& timedEvent : timedEvents) {
+    for (size_t i = 0; i < timedEvents.size(); ++i) {
+        auto& timedEvent = timedEvents[i];
+
+        ++eventCounter_; // NEW: increment event counter
+
+        // 3. InputBundle construction
+        auto inputBundleStart = std::chrono::high_resolution_clock::now();
         InputBundle input;
-
         input.set("TMEvent", timedEvent->event);
         input.set("timestamp", timedEvent->timestamp);
         input.set("run_number", lastRunNumber_);
+        auto inputBundleEnd = std::chrono::high_resolution_clock::now();
+        auto inputBundleDuration = std::chrono::duration_cast<std::chrono::microseconds>(inputBundleEnd - inputBundleStart).count();
+        spdlog::debug("[MidasEventProcessor] Event {} InputBundle construction took {} μs ({:.3f} ms)",
+                      i, inputBundleDuration, inputBundleDuration / 1000.0);
 
+        // 4. setInputData
+        auto setInputStart = std::chrono::high_resolution_clock::now();
         pipeline_->setInputData(std::move(input));
+        auto setInputEnd = std::chrono::high_resolution_clock::now();
+        auto setInputDuration = std::chrono::duration_cast<std::chrono::microseconds>(setInputEnd - setInputStart).count();
+        spdlog::debug("[MidasEventProcessor] Event {} pipeline_->setInputData() took {} μs ({:.3f} ms)",
+                      i, setInputDuration, setInputDuration / 1000.0);
+
+        // 5. execute
+        auto executeStart = std::chrono::high_resolution_clock::now();
         pipeline_->execute();
+        auto executeEnd = std::chrono::high_resolution_clock::now();
+        auto executeDuration = std::chrono::duration_cast<std::chrono::microseconds>(executeEnd - executeStart).count();
+        spdlog::debug("[MidasEventProcessor] Event {} pipeline_->execute() took {} μs ({:.3f} ms)",
+                      i, executeDuration, executeDuration / 1000.0);
 
-        json serializedData = pipeline_->getDataProductManager().serializeAll();
+        // 6. serialization (conditionally)
+        json serializedData;
+        if (serializeEveryNEvents_ == 0 || eventCounter_ % serializeEveryNEvents_ == 0) {
+            auto serializeStart = std::chrono::high_resolution_clock::now();
+            serializedData = pipeline_->getDataProductManager().serializeAll();
+            auto serializeEnd = std::chrono::high_resolution_clock::now();
+            auto serializeDuration = std::chrono::duration_cast<std::chrono::microseconds>(serializeEnd - serializeStart).count();
+            spdlog::debug("[MidasEventProcessor] Event {} serialization took {} μs ({:.3f} ms)",
+                          i, serializeDuration, serializeDuration / 1000.0);
+        } else {
+            spdlog::debug("[MidasEventProcessor] Event {} skipped serialization (serializeEveryNEvents = {})",
+                          i, serializeEveryNEvents_);
+        }
 
-        json outJson;
-        outJson["run_number"] = lastRunNumber_;
-        outJson["data_products"] = serializedData;
-
-        out.push_back(outJson.dump());
+        // 7. JSON construction and dump (only if serialized)
+        if (!serializedData.is_null()) {
+            auto dumpStart = std::chrono::high_resolution_clock::now();
+            json outJson;
+            outJson["run_number"] = lastRunNumber_;
+            outJson["data_products"] = serializedData;
+            out.push_back(outJson.dump());
+            auto dumpEnd = std::chrono::high_resolution_clock::now();
+            auto dumpDuration = std::chrono::duration_cast<std::chrono::microseconds>(dumpEnd - dumpStart).count();
+            spdlog::debug("[MidasEventProcessor] Event {} final JSON dump took {} μs ({:.3f} ms)",
+                          i, dumpDuration, dumpDuration / 1000.0);
+        }
     }
 
     if (!timedEvents.empty()) {
@@ -178,6 +232,10 @@ std::vector<std::string> MidasEventProcessor::getProcessedOutput() {
     }
 
     lastProcessedTime_ = std::chrono::system_clock::now();
+    auto overallEnd = std::chrono::high_resolution_clock::now();
+    auto overallDuration = std::chrono::duration_cast<std::chrono::microseconds>(overallEnd - overallStart).count();
+    spdlog::debug("[MidasEventProcessor] Total getProcessedOutput() time for {} event(s): {} μs ({:.3f} ms)",
+                  timedEvents.size(), overallDuration, overallDuration / 1000.0);
 
     return out;
 }

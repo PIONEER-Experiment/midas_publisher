@@ -45,7 +45,7 @@ set(TBB_OPTIONS
 
 # ---------------------- analysis_pipeline_core ----------------------
 set(analysis_pipeline_core_REPO   "jaca230/analysis_pipeline_core")
-set(analysis_pipeline_core_TAG    "main")
+set(analysis_pipeline_core_TAG    "debug")
 set(analysis_pipeline_core_TARGETS
   analysis_pipeline::analysis_pipeline_core
   analysis_pipeline::spdlog_header_only
@@ -57,7 +57,7 @@ set(analysis_pipeline_core_OPTIONS
 
 # ---------------------- analysis_pipeline ----------------------
 set(analysis_pipeline_REPO   "jaca230/analysis_pipeline")
-set(analysis_pipeline_TAG    "main")
+set(analysis_pipeline_TAG    "debug")
 set(analysis_pipeline_TARGET "analysis_pipeline::analysis_pipeline")
 set(analysis_pipeline_OPTIONS
   "CMAKE_POSITION_INDEPENDENT_CODE ON"
@@ -89,7 +89,7 @@ set(midas_event_unpacker_plugin_OPTIONS
 )
 
 # ---------------------- mu-data-products ----------------------
-set(DataProducts_REPO "git@github-jaca230:PIONEER-Experiment/mu-data-products.git")
+set(DataProducts_REPO "git@github.com:PIONEER-Experiment/mu-data-products.git")
 set(DataProducts_TAG    "main")
 set(DataProducts_TARGET "") # Dynamically linked
 set(DataProducts_OPTIONS
@@ -97,7 +97,7 @@ set(DataProducts_OPTIONS
 )
 
 # ---------------------- mu-unpackers ----------------------
-set(Unpackers_REPO   "git@github-jaca230:PIONEER-Experiment/mu-unpackers.git")
+set(Unpackers_REPO   "git@github.com:PIONEER-Experiment/mu-unpackers.git")
 set(Unpackers_TAG    "main")
 set(Unpackers_TARGET "") # Dynamically linked
 set(Unpackers_OPTIONS

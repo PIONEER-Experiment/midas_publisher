@@ -8,13 +8,14 @@
       "zmq-address": "tcp://127.0.0.1:5555",
       "name": "DATA",
       "publishes-per-batch": 1,
-      "publishes-ignored-after-batch": 9,
+      "publishes-ignored-after-batch": 0,
       "num-events-in-circular-buffer": 1,
       "processors": [
         {
           "processor": "MidasEventProcessor",
           "period-ms": 0,
           "midas_event_processor_config": {
+            "serialize-every-n-events": 100,
             "clear-products-on-new-run": true,
             "tags_to_omit_from_clear": [
               "persistent",
@@ -22,14 +23,14 @@
             ]
           },
           "midas_receiver_config": {
-            "host": "pioneerdaq",
-            "experiment": "DAQ",
+            "host": "",
+            "experiment": "",
             "buffer": "SYSTEM",
             "client-name": "MidasEventPublisher",
             "event-id": -1,
             "get-all": false,
             "buffer-size": 1000,
-            "yield-timeout-ms": 1,
+            "yield-timeout-ms": 0,
             "num-events-per-retrieval": 1
           },
           "pipeline_config": {
@@ -162,8 +163,8 @@
           "processor": "MidasOdbProcessor",
           "period-ms": 10000,
           "midas_receiver_config": {
-            "host": "pioneerdaq",
-            "experiment": "DAQ",
+            "host": "",
+            "experiment": "",
             "buffer": "SYSTEM",
             "client-name": "MidasEventPublisher",
             "event-id": -1,

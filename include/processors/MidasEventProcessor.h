@@ -1,4 +1,3 @@
-// MidasEventProcessor.h
 #ifndef MIDAS_EVENT_PROCESSOR_H
 #define MIDAS_EVENT_PROCESSOR_H
 
@@ -33,6 +32,10 @@ private:
     INT lastRunNumber_ = -1;
     bool clearProductsOnNewRun_ = true;
     std::unordered_set<std::string> tagsToOmitFromClear_;
+
+    // New members for serialization control
+    size_t serializeEveryNEvents_ = 1;
+    size_t eventCounter_ = 0;
 
     std::shared_ptr<ConfigManager> configManager_;
     std::unique_ptr<Pipeline> pipeline_;

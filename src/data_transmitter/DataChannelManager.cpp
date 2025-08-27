@@ -37,8 +37,8 @@ bool DataChannelManager::publish() {
     for (auto& channelPair : channels) {
         if (!channelPair.second.publish()) {
             success = false;
-            spdlog::warn("Channel {} has failed to publish. [{}:{}]",
-                         channelPair.first, __FILE__, __LINE__);
+            //spdlog::warn("Channel {} has failed to publish. [{}:{}]",
+            //             channelPair.first, __FILE__, __LINE__);
             channelPair.second.printAttributes();
         }
     }

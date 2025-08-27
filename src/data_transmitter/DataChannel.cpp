@@ -32,7 +32,7 @@ bool DataChannel::publish() {
         std::string serializedData = processesManager.getDataBuffer().SerializeBuffer();
         return transmitter->publish(*this, serializedData);
     }
-    return true;
+    return false;
 }
 
 void DataChannel::updateTickTime() {
