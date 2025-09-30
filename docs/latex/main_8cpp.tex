@@ -1,0 +1,82 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Entry point for the program.  
+
+
+{\ttfamily \#include \char`\"{}utilities/\+Json\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+transmitter/\+Data\+Transmitter\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+transmitter/\+Data\+Channel\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/\+Signal\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}processors/\+General\+Processor\+Factory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utilities/\+Logger\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}processors/\+General\+Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}processors/\+Command\+Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}processors/\+Midas\+Event\+Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}processors/\+Midas\+Odb\+Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$spdlog/spdlog.\+h$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{main_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}} 
+using {\bfseries json} = nlohmann\+::json
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_abc6bfde2d5a3c8cd29cae7c4c0675129}{register\+Processors}} (nlohmann\+::json config)
+\begin{DoxyCompactList}\small\item\em Function to register processor classes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em The main function of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the program. 
+
+This file contains the main function and initializes the necessary components for the program to run. It sets up the data channel manager, registers processors, and enters the main loop for data processing.
+
+Midas is a pain to work with, so this additional branch is a \char`\"{}workaround\char`\"{} to use it. Midas works by handling a global state, which means we need to manage it in main as well as in the processors. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The main function of the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command-\/line arguments. \\
+\hline
+{\em argv} & Array of command-\/line arguments. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit code. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_abc6bfde2d5a3c8cd29cae7c4c0675129}\label{main_8cpp_abc6bfde2d5a3c8cd29cae7c4c0675129}} 
+\index{main.cpp@{main.cpp}!registerProcessors@{registerProcessors}}
+\index{registerProcessors@{registerProcessors}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{registerProcessors()}{registerProcessors()}}
+{\footnotesize\ttfamily void register\+Processors (\begin{DoxyParamCaption}\item[{nlohmann\+::json}]{config }\end{DoxyParamCaption})}
+
+
+
+Function to register processor classes. 
+
+New processors MUST be registered here!
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Configuration data in JSON format. \\
+\hline
+\end{DoxyParams}

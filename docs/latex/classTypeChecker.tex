@@ -1,0 +1,83 @@
+\hypertarget{classTypeChecker}{}\doxysection{Type\+Checker Class Reference}
+\label{classTypeChecker}\index{TypeChecker@{TypeChecker}}
+
+
+A utility class for type checking.  
+
+
+
+
+{\ttfamily \#include $<$Type\+Checker.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Base , typename Derived $>$ }\\static bool \mbox{\hyperlink{classTypeChecker_a0a0d73da592a8598bf316b55e7d94efe}{Is\+Instance\+Of}} (const Derived $\ast$derived\+Ptr)
+\begin{DoxyCompactList}\small\item\em Checks if a pointer is an instance of a specific base type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Base , typename Derived $>$ }\\static bool \mbox{\hyperlink{classTypeChecker_a9a7b060e6f33fce02cc87a70f36ec0b1}{Is\+Instance\+Of}} (const std\+::shared\+\_\+ptr$<$ Derived $>$ \&derived\+Ptr)
+\begin{DoxyCompactList}\small\item\em Checks if a shared pointer is an instance of a specific base type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A utility class for type checking. 
+
+The {\ttfamily \mbox{\hyperlink{classTypeChecker}{Type\+Checker}}} class provides template-\/based methods for checking whether an object or a smart pointer is an instance of a certain base type. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTypeChecker_a0a0d73da592a8598bf316b55e7d94efe}\label{classTypeChecker_a0a0d73da592a8598bf316b55e7d94efe}} 
+\index{TypeChecker@{TypeChecker}!IsInstanceOf@{IsInstanceOf}}
+\index{IsInstanceOf@{IsInstanceOf}!TypeChecker@{TypeChecker}}
+\doxysubsubsection{\texorpdfstring{IsInstanceOf()}{IsInstanceOf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Derived $>$ \\
+static bool Type\+Checker\+::\+Is\+Instance\+Of (\begin{DoxyParamCaption}\item[{const Derived $\ast$}]{derived\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if a pointer is an instance of a specific base type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Base} & The base type. \\
+\hline
+{\em Derived} & The derived type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em derived\+Ptr} & Pointer to the derived type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the pointer is an instance of the base type, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTypeChecker_a9a7b060e6f33fce02cc87a70f36ec0b1}\label{classTypeChecker_a9a7b060e6f33fce02cc87a70f36ec0b1}} 
+\index{TypeChecker@{TypeChecker}!IsInstanceOf@{IsInstanceOf}}
+\index{IsInstanceOf@{IsInstanceOf}!TypeChecker@{TypeChecker}}
+\doxysubsubsection{\texorpdfstring{IsInstanceOf()}{IsInstanceOf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Base , typename Derived $>$ \\
+static bool Type\+Checker\+::\+Is\+Instance\+Of (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ Derived $>$ \&}]{derived\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if a shared pointer is an instance of a specific base type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Base} & The base type. \\
+\hline
+{\em Derived} & The derived type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em derived\+Ptr} & Shared pointer to the derived type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the shared pointer is an instance of the base type, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utilities/Type\+Checker.\+h\end{DoxyCompactItemize}

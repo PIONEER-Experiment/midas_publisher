@@ -1,0 +1,85 @@
+\hypertarget{classGeneralProcessorFactory}{}\doxysection{General\+Processor\+Factory Class Reference}
+\label{classGeneralProcessorFactory}\index{GeneralProcessorFactory@{GeneralProcessorFactory}}
+
+
+A factory class for creating instances of \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}.  
+
+
+
+
+{\ttfamily \#include $<$General\+Processor\+Factory.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGeneralProcessorFactory_a37a1c08e8e76f05197d179a3c29f494c}{Register\+Processor}} (const std\+::string \&processor\+Type, std\+::function$<$ \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$()$>$ creator)
+\begin{DoxyCompactList}\small\item\em Registers a processor type with its creator function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$ \mbox{\hyperlink{classGeneralProcessorFactory_a72e8ec568ec2d98f183681ebad80e800}{Create\+Processor}} (const std\+::string \&processor\+Type) const
+\begin{DoxyCompactList}\small\item\em Creates an instance of \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} based on the provided processor type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classGeneralProcessorFactory}{General\+Processor\+Factory}} \& \mbox{\hyperlink{classGeneralProcessorFactory_a765e196b59f2a197ec9776cb51465359}{Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classGeneralProcessorFactory}{General\+Processor\+Factory}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A factory class for creating instances of \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}. 
+
+The {\ttfamily \mbox{\hyperlink{classGeneralProcessorFactory}{General\+Processor\+Factory}}} class provides functionality to register and create instances of the \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} class using a factory pattern. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneralProcessorFactory_a72e8ec568ec2d98f183681ebad80e800}\label{classGeneralProcessorFactory_a72e8ec568ec2d98f183681ebad80e800}} 
+\index{GeneralProcessorFactory@{GeneralProcessorFactory}!CreateProcessor@{CreateProcessor}}
+\index{CreateProcessor@{CreateProcessor}!GeneralProcessorFactory@{GeneralProcessorFactory}}
+\doxysubsubsection{\texorpdfstring{CreateProcessor()}{CreateProcessor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$ General\+Processor\+Factory\+::\+Create\+Processor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{processor\+Type }\end{DoxyParamCaption}) const}
+
+
+
+Creates an instance of \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} based on the provided processor type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor\+Type} & The type identifier for the processor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeneralProcessorFactory_a765e196b59f2a197ec9776cb51465359}\label{classGeneralProcessorFactory_a765e196b59f2a197ec9776cb51465359}} 
+\index{GeneralProcessorFactory@{GeneralProcessorFactory}!Instance@{Instance}}
+\index{Instance@{Instance}!GeneralProcessorFactory@{GeneralProcessorFactory}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneralProcessorFactory}{General\+Processor\+Factory}} \& General\+Processor\+Factory\+::\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classGeneralProcessorFactory}{General\+Processor\+Factory}}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGeneralProcessorFactory_a37a1c08e8e76f05197d179a3c29f494c}\label{classGeneralProcessorFactory_a37a1c08e8e76f05197d179a3c29f494c}} 
+\index{GeneralProcessorFactory@{GeneralProcessorFactory}!RegisterProcessor@{RegisterProcessor}}
+\index{RegisterProcessor@{RegisterProcessor}!GeneralProcessorFactory@{GeneralProcessorFactory}}
+\doxysubsubsection{\texorpdfstring{RegisterProcessor()}{RegisterProcessor()}}
+{\footnotesize\ttfamily void General\+Processor\+Factory\+::\+Register\+Processor (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{processor\+Type,  }\item[{std\+::function$<$ \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$()$>$}]{creator }\end{DoxyParamCaption})}
+
+
+
+Registers a processor type with its creator function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor\+Type} & The type identifier for the processor. \\
+\hline
+{\em creator} & The function that creates an instance of the processor. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/processors/General\+Processor\+Factory.\+h\item 
+src/processors/General\+Processor\+Factory.\+cpp\end{DoxyCompactItemize}

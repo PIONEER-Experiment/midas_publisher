@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['generalprocessor_19',['GeneralProcessor',['../classGeneralProcessor.html',1,'GeneralProcessor'],['../classGeneralProcessor.html#ae1eda776118e36f2062b1f16218e0cd8',1,'GeneralProcessor::GeneralProcessor()']]],
+  ['generalprocessorfactory_20',['GeneralProcessorFactory',['../classGeneralProcessorFactory.html',1,'']]],
+  ['getaddress_21',['getAddress',['../classDataChannel.html#ae2b355c0cc2684c35257bcee6b8a9ba5',1,'DataChannel']]],
+  ['getallchannels_22',['getAllChannels',['../classDataChannelManager.html#a4340c8de851a7db6cf9aa2ff15795757',1,'DataChannelManager']]],
+  ['getbuffer_23',['GetBuffer',['../classDataBuffer.html#a53a58dfc588df74ea9484dae7e7a3471',1,'DataBuffer']]],
+  ['getchannel_24',['getChannel',['../classDataChannelManager.html#a523a55ba5c2f31026680f7aa7ab0e318',1,'DataChannelManager']]],
+  ['getchannelmap_25',['getChannelMap',['../classDataChannelManager.html#a9025a3775e2438a3784d89e903596b57',1,'DataChannelManager']]],
+  ['getcommand_26',['getCommand',['../classCommandRunner.html#a5291947ab30c5a95d29d1001a4e62d62',1,'CommandRunner']]],
+  ['getcommandrunner_27',['getCommandRunner',['../classCommandProcessor.html#ad0beedad9b0535415eaf8762dbc32d34',1,'CommandProcessor']]],
+  ['getconfig_28',['getConfig',['../classJsonManager.html#a1e3c26143e45b7869ecb44c2dd1f9b82',1,'JsonManager']]],
+  ['getdatabuffer_29',['getDataBuffer',['../classDataChannelProcessesManager.html#abce1195f1d6aaf07e0d83eb5006149c4',1,'DataChannelProcessesManager']]],
+  ['geteventsbeforebreak_30',['getEventsBeforeBreak',['../classDataChannel.html#ad42b27120b73d4a5fe17acc52269d37a',1,'DataChannel']]],
+  ['geteventspublished_31',['getEventsPublished',['../classDataChannel.html#a940ce0e07433910d1648a7eab5151903',1,'DataChannel']]],
+  ['geteventsseen_32',['getEventsSeen',['../classDataChannel.html#a49b993d93406299654b8707ecbbcc867',1,'DataChannel']]],
+  ['geteventsseenonbreak_33',['getEventsSeenOnBreak',['../classDataChannel.html#a0e58d89fd9f8a7b21c25f10c6ef3b70e',1,'DataChannel']]],
+  ['geteventstoignoreinbreak_34',['getEventsToIgnoreInBreak',['../classDataChannel.html#a6f8981227b1c9345847aa0a8d715b072',1,'DataChannel']]],
+  ['getglobalticktime_35',['getGlobalTickTime',['../classDataChannelManager.html#afb48a0780219db222e2d105623782ebf',1,'DataChannelManager']]],
+  ['getinstance_36',['getInstance',['../classJsonManager.html#a195c89b9868a39e6dfbacd9a491617d7',1,'JsonManager::getInstance(const std::string &amp;configFile)'],['../classJsonManager.html#a614ccaaeebd7be1f35f12657c988b887',1,'JsonManager::getInstance()'],['../classSignalHandler.html#a15631110fc9c8fee4c1b2bf3bced2de3',1,'SignalHandler::getInstance()']]],
+  ['getname_37',['getName',['../classDataChannel.html#aec020d154f233b2873708a3123378040',1,'DataChannel']]],
+  ['getperiod_38',['getPeriod',['../classCommandProcessor.html#abb5a1f0942b285a0ae06b6cbce225621',1,'CommandProcessor::getPeriod()'],['../classGeneralProcessor.html#a8d3433cced851b340d3a2b41bc031a32',1,'GeneralProcessor::getPeriod()']]],
+  ['getprocessedoutput_39',['getProcessedOutput',['../classCommandProcessor.html#ae1415f17b13b6017839e1dff5c384e2c',1,'CommandProcessor::getProcessedOutput()'],['../classGeneralProcessor.html#ac25327015ff4e08b1b195e08ca5c551e',1,'GeneralProcessor::getProcessedOutput()'],['../classMidasEventProcessor.html#a20012d6c8e3288a988192a75e18cdf87',1,'MidasEventProcessor::getProcessedOutput()'],['../classMidasOdbProcessor.html#aa6f9487128e905f43f644560181c1586',1,'MidasOdbProcessor::getProcessedOutput()']]],
+  ['getprocessorperiodsgcd_40',['getProcessorPeriodsGCD',['../classDataChannelProcessesManager.html#a5cc2ff165c73fe2eda887c04f99109a0',1,'DataChannelProcessesManager']]],
+  ['getticktime_41',['getTickTime',['../classDataChannel.html#a1b3c25b7bd5a39cf1d5c0cf73954e307',1,'DataChannel']]],
+  ['gettransmitter_42',['getTransmitter',['../classDataTransmitterManager.html#af0954c723fd9d7716e62725366c559fd',1,'DataTransmitterManager']]],
+  ['getwaittime_43',['getWaitTime',['../classCommandRunner.html#ade5c8ac5e7a7a5f9d8a55843d67e914a',1,'CommandRunner']]]
+];

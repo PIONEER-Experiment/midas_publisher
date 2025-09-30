@@ -1,0 +1,79 @@
+\hypertarget{classSignalHandler}{}\doxysection{Signal\+Handler Class Reference}
+\label{classSignalHandler}\index{SignalHandler@{SignalHandler}}
+
+
+A class to handle signals, such as interrupt signals (Ctrl+C) and termination signals.  
+
+
+
+
+{\ttfamily \#include $<$Signal\+Handler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSignalHandler_a3149ab1b5e1c8940d11b182f8059d916}\label{classSignalHandler_a3149ab1b5e1c8940d11b182f8059d916}} 
+\mbox{\hyperlink{classSignalHandler_a3149ab1b5e1c8940d11b182f8059d916}{Signal\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSignalHandler_addc8b5b0b969eb405376a77a369de007}{$\sim$\+Signal\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSignalHandler_a4f725f94ab6c769eef1ca03d8b561473}{is\+Quit\+Signal\+Received}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether a quit signal is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}} \& \mbox{\hyperlink{classSignalHandler_a15631110fc9c8fee4c1b2bf3bced2de3}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Static function to get the singleton instance of \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to handle signals, such as interrupt signals (Ctrl+C) and termination signals. 
+
+The {\ttfamily \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}} class provides functionality to handle signals and determine whether a quit signal is received. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSignalHandler_addc8b5b0b969eb405376a77a369de007}\label{classSignalHandler_addc8b5b0b969eb405376a77a369de007}} 
+\index{SignalHandler@{SignalHandler}!````~SignalHandler@{$\sim$SignalHandler}}
+\index{````~SignalHandler@{$\sim$SignalHandler}!SignalHandler@{SignalHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$SignalHandler()}{~SignalHandler()}}
+{\footnotesize\ttfamily Signal\+Handler\+::$\sim$\+Signal\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}. 
+
+Unregisters signal handlers during destruction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSignalHandler_a15631110fc9c8fee4c1b2bf3bced2de3}\label{classSignalHandler_a15631110fc9c8fee4c1b2bf3bced2de3}} 
+\index{SignalHandler@{SignalHandler}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!SignalHandler@{SignalHandler}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}} \& Signal\+Handler\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static function to get the singleton instance of \mbox{\hyperlink{classSignalHandler}{Signal\+Handler}}. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSignalHandler_a4f725f94ab6c769eef1ca03d8b561473}\label{classSignalHandler_a4f725f94ab6c769eef1ca03d8b561473}} 
+\index{SignalHandler@{SignalHandler}!isQuitSignalReceived@{isQuitSignalReceived}}
+\index{isQuitSignalReceived@{isQuitSignalReceived}!SignalHandler@{SignalHandler}}
+\doxysubsubsection{\texorpdfstring{isQuitSignalReceived()}{isQuitSignalReceived()}}
+{\footnotesize\ttfamily bool Signal\+Handler\+::is\+Quit\+Signal\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks whether a quit signal is received. 
+
+\begin{DoxyReturn}{Returns}
+True if a quit signal is received, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilities/Signal\+Handler.\+h\item 
+src/utilities/Signal\+Handler.\+cpp\end{DoxyCompactItemize}

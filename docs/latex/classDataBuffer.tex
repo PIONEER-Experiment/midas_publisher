@@ -1,0 +1,108 @@
+\hypertarget{classDataBuffer}{}\doxysection{Data\+Buffer$<$ T $>$ Class Template Reference}
+\label{classDataBuffer}\index{DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}}
+
+
+A circular buffer for storing data of a specified type.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Buffer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataBuffer_aa51e4cb7147b6d341aff27f247ff867a}{Data\+Buffer}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}} with a specified size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataBuffer_ac416fee4f7f5708cd747baa091701631}{Push}} (const T \&data)
+\begin{DoxyCompactList}\small\item\em Pushes new data into the circular buffer. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{classDataBuffer_a53a58dfc588df74ea9484dae7e7a3471}{Get\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Gets the buffer content as a vector. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDataBuffer_ab7df68f0442748698eb180d480c050f3}{Serialize\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Serializes the buffer content to a JSON string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Data\+Buffer$<$ T $>$}
+
+A circular buffer for storing data of a specified type. 
+
+The {\ttfamily \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}}} class implements a circular buffer to store data of a specified type. It allows pushing new data into the buffer and provides methods to retrieve and serialize the buffered data.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of data to be stored in the buffer. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataBuffer_aa51e4cb7147b6d341aff27f247ff867a}\label{classDataBuffer_aa51e4cb7147b6d341aff27f247ff867a}} 
+\index{DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}!DataBuffer@{DataBuffer}}
+\index{DataBuffer@{DataBuffer}!DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DataBuffer()}{DataBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classDataBuffer}{Data\+Buffer}}$<$ T $>$\+::\mbox{\hyperlink{classDataBuffer}{Data\+Buffer}} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}} with a specified size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the circular buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataBuffer_a53a58dfc588df74ea9484dae7e7a3471}\label{classDataBuffer_a53a58dfc588df74ea9484dae7e7a3471}} 
+\index{DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}!GetBuffer@{GetBuffer}}
+\index{GetBuffer@{GetBuffer}!DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetBuffer()}{GetBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}}$<$ T $>$\+::Get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the buffer content as a vector. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing the buffered data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataBuffer_ac416fee4f7f5708cd747baa091701631}\label{classDataBuffer_ac416fee4f7f5708cd747baa091701631}} 
+\index{DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}!Push@{Push}}
+\index{Push@{Push}!DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}}$<$ T $>$\+::Push (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes new data into the circular buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to be pushed into the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataBuffer_ab7df68f0442748698eb180d480c050f3}\label{classDataBuffer_ab7df68f0442748698eb180d480c050f3}} 
+\index{DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}!SerializeBuffer@{SerializeBuffer}}
+\index{SerializeBuffer@{SerializeBuffer}!DataBuffer$<$ T $>$@{DataBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SerializeBuffer()}{SerializeBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classDataBuffer}{Data\+Buffer}}$<$ T $>$\+::Serialize\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serializes the buffer content to a JSON string. 
+
+\begin{DoxyReturn}{Returns}
+A JSON string representing the buffered data. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+transmitter/Data\+Buffer.\+h\end{DoxyCompactItemize}

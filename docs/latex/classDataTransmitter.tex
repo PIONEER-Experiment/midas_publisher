@@ -1,0 +1,122 @@
+\hypertarget{classDataTransmitter}{}\doxysection{Data\+Transmitter Class Reference}
+\label{classDataTransmitter}\index{DataTransmitter@{DataTransmitter}}
+
+
+Transmits data over a Zero\+MQ (zmq) publisher socket.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Transmitter.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataTransmitter_aa7f4c42d9be74959e1b47d677f90b89a}{Data\+Transmitter}} (const std\+::string \&zmq\+Address, int verbose=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataTransmitter_af84ac303cd5e7f50acd2b2efcd58b16a}\label{classDataTransmitter_af84ac303cd5e7f50acd2b2efcd58b16a}} 
+\mbox{\hyperlink{classDataTransmitter_af84ac303cd5e7f50acd2b2efcd58b16a}{$\sim$\+Data\+Transmitter}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataTransmitter_a3f59d7e1583605119a29f91b34580229}{bind}} ()
+\begin{DoxyCompactList}\small\item\em Binds the transmitter to the zmq publisher socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataTransmitter_a69c46999eef168e059886387df9323af}{is\+Bound}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the transmitter is bound to the zmq publisher socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataTransmitter_a0868ce996560bd27b56852ca9cd4f889}{publish}} (\mbox{\hyperlink{classDataChannel}{Data\+Channel}} \&data\+Channel, const std\+::string \&data)
+\begin{DoxyCompactList}\small\item\em Publishes data to the specified data channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataTransmitter_ac8c1d4439fa56be0e05104aa717ccc0e}{set\+Verbose}} (int enable\+Verbose)
+\begin{DoxyCompactList}\small\item\em Sets the verbosity level for logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Transmits data over a Zero\+MQ (zmq) publisher socket. 
+
+The {\ttfamily \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}} class provides functionality for binding to a zmq publisher socket and publishing data to a specific zmq-\/address. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataTransmitter_aa7f4c42d9be74959e1b47d677f90b89a}\label{classDataTransmitter_aa7f4c42d9be74959e1b47d677f90b89a}} 
+\index{DataTransmitter@{DataTransmitter}!DataTransmitter@{DataTransmitter}}
+\index{DataTransmitter@{DataTransmitter}!DataTransmitter@{DataTransmitter}}
+\doxysubsubsection{\texorpdfstring{DataTransmitter()}{DataTransmitter()}}
+{\footnotesize\ttfamily Data\+Transmitter\+::\+Data\+Transmitter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{zmq\+Address,  }\item[{int}]{verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zmq\+Address} & The zmq-\/address to which the transmitter will bind. \\
+\hline
+{\em verbose} & Verbosity level for logging (default is 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataTransmitter_a3f59d7e1583605119a29f91b34580229}\label{classDataTransmitter_a3f59d7e1583605119a29f91b34580229}} 
+\index{DataTransmitter@{DataTransmitter}!bind@{bind}}
+\index{bind@{bind}!DataTransmitter@{DataTransmitter}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily bool Data\+Transmitter\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Binds the transmitter to the zmq publisher socket. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataTransmitter_a69c46999eef168e059886387df9323af}\label{classDataTransmitter_a69c46999eef168e059886387df9323af}} 
+\index{DataTransmitter@{DataTransmitter}!isBound@{isBound}}
+\index{isBound@{isBound}!DataTransmitter@{DataTransmitter}}
+\doxysubsubsection{\texorpdfstring{isBound()}{isBound()}}
+{\footnotesize\ttfamily bool Data\+Transmitter\+::is\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the transmitter is bound to the zmq publisher socket. 
+
+\begin{DoxyReturn}{Returns}
+True if bound, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataTransmitter_a0868ce996560bd27b56852ca9cd4f889}\label{classDataTransmitter_a0868ce996560bd27b56852ca9cd4f889}} 
+\index{DataTransmitter@{DataTransmitter}!publish@{publish}}
+\index{publish@{publish}!DataTransmitter@{DataTransmitter}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily bool Data\+Transmitter\+::publish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDataChannel}{Data\+Channel}} \&}]{data\+Channel,  }\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Publishes data to the specified data channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Channel} & The data channel to publish to. \\
+\hline
+{\em data} & The data to publish. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful (this does not necessarily mean data is published), false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataTransmitter_ac8c1d4439fa56be0e05104aa717ccc0e}\label{classDataTransmitter_ac8c1d4439fa56be0e05104aa717ccc0e}} 
+\index{DataTransmitter@{DataTransmitter}!setVerbose@{setVerbose}}
+\index{setVerbose@{setVerbose}!DataTransmitter@{DataTransmitter}}
+\doxysubsubsection{\texorpdfstring{setVerbose()}{setVerbose()}}
+{\footnotesize\ttfamily void Data\+Transmitter\+::set\+Verbose (\begin{DoxyParamCaption}\item[{int}]{enable\+Verbose }\end{DoxyParamCaption})}
+
+
+
+Sets the verbosity level for logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+Verbose} & Verbosity level to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+transmitter/Data\+Transmitter.\+h\item 
+src/data\+\_\+transmitter/Data\+Transmitter.\+cpp\end{DoxyCompactItemize}

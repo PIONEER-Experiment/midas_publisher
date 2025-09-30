@@ -1,0 +1,208 @@
+\hypertarget{classDataChannelManager}{}\doxysection{Data\+Channel\+Manager Class Reference}
+\label{classDataChannelManager}\index{DataChannelManager@{DataChannelManager}}
+
+
+Manages data channels and their configuration.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Channel\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataChannelManager_a8d2879feaa1c657c3b48746938be1095}{Data\+Channel\+Manager}} (const nlohmann\+::json \&channel\+Config, int verbose=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataChannelManager}{Data\+Channel\+Manager}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataChannelManager_aecd6bf46dbee7dc4b8496c360c52e3a2}{publish}} ()
+\begin{DoxyCompactList}\small\item\em Publishes data for all registered data channels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDataChannel}{Data\+Channel}} $\ast$ \mbox{\hyperlink{classDataChannelManager_a523a55ba5c2f31026680f7aa7ab0e318}{get\+Channel}} (const std\+::string \&channel\+Id)
+\begin{DoxyCompactList}\small\item\em Gets a pointer to a specific data channel by ID. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, \mbox{\hyperlink{classDataChannel}{Data\+Channel}} $>$ \& \mbox{\hyperlink{classDataChannelManager_a9025a3775e2438a3784d89e903596b57}{get\+Channel\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Gets a map of all registered data channels. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classDataChannel}{Data\+Channel}} $>$ \mbox{\hyperlink{classDataChannelManager_a4340c8de851a7db6cf9aa2ff15795757}{get\+All\+Channels}} () const
+\begin{DoxyCompactList}\small\item\em Gets a vector of all registered data channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannelManager_aacbb944add821588a735a0516888b931}{add\+Channel}} (const std\+::string \&channel\+Id, \mbox{\hyperlink{classDataChannel}{Data\+Channel}} data\+Channel)
+\begin{DoxyCompactList}\small\item\em Adds a new data channel to the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannelManager_a8457d3d452228c49ffa1a65250d4a941}{add\+Channel}} (const std\+::string \&channel\+Id, const nlohmann\+::json \&channel\+Config)
+\begin{DoxyCompactList}\small\item\em Adds a new data channel to the manager using JSON configuration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataChannelManager_a485c2117d3f48d4241237d54f743f755}{remove\+Channel}} (const std\+::string \&channel\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a data channel from the manager. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannelManager_afb48a0780219db222e2d105623782ebf}{get\+Global\+Tick\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the global tick time for data channel publication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannelManager_a9ba33da1945db20003a5b173a19a0ee6}\label{classDataChannelManager_a9ba33da1945db20003a5b173a19a0ee6}} 
+void \mbox{\hyperlink{classDataChannelManager_a9ba33da1945db20003a5b173a19a0ee6}{set\+Global\+Tick\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Sets the global tick time for data channel publication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannelManager_a8703d69d6eb0c91274046c15b57323bf}{set\+Global\+Tick\+Time}} (int tick\+Time)
+\begin{DoxyCompactList}\small\item\em Sets a custom global tick time for data channel publication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages data channels and their configuration. 
+
+The {\ttfamily \mbox{\hyperlink{classDataChannelManager}{Data\+Channel\+Manager}}} class is responsible for managing data channels, providing access to individual channels, and coordinating their publication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataChannelManager_a8d2879feaa1c657c3b48746938be1095}\label{classDataChannelManager_a8d2879feaa1c657c3b48746938be1095}} 
+\index{DataChannelManager@{DataChannelManager}!DataChannelManager@{DataChannelManager}}
+\index{DataChannelManager@{DataChannelManager}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{DataChannelManager()}{DataChannelManager()}}
+{\footnotesize\ttfamily Data\+Channel\+Manager\+::\+Data\+Channel\+Manager (\begin{DoxyParamCaption}\item[{const nlohmann\+::json \&}]{channel\+Config,  }\item[{int}]{verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classDataChannelManager}{Data\+Channel\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Config} & JSON configuration for initializing data channels. \\
+\hline
+{\em verbose} & Verbosity level for logging (default is 0). Though, this is automatically set by config.\+json \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataChannelManager_a8457d3d452228c49ffa1a65250d4a941}\label{classDataChannelManager_a8457d3d452228c49ffa1a65250d4a941}} 
+\index{DataChannelManager@{DataChannelManager}!addChannel@{addChannel}}
+\index{addChannel@{addChannel}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{addChannel()}{addChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Data\+Channel\+Manager\+::add\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{channel\+Id,  }\item[{const nlohmann\+::json \&}]{channel\+Config }\end{DoxyParamCaption})}
+
+
+
+Adds a new data channel to the manager using JSON configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Id} & The ID of the data channel to add. \\
+\hline
+{\em channel\+Config} & JSON configuration for the data channel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannelManager_aacbb944add821588a735a0516888b931}\label{classDataChannelManager_aacbb944add821588a735a0516888b931}} 
+\index{DataChannelManager@{DataChannelManager}!addChannel@{addChannel}}
+\index{addChannel@{addChannel}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{addChannel()}{addChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Data\+Channel\+Manager\+::add\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{channel\+Id,  }\item[{\mbox{\hyperlink{classDataChannel}{Data\+Channel}}}]{data\+Channel }\end{DoxyParamCaption})}
+
+
+
+Adds a new data channel to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Id} & The ID of the data channel to add. \\
+\hline
+{\em data\+Channel} & The \mbox{\hyperlink{classDataChannel}{Data\+Channel}} object to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannelManager_a4340c8de851a7db6cf9aa2ff15795757}\label{classDataChannelManager_a4340c8de851a7db6cf9aa2ff15795757}} 
+\index{DataChannelManager@{DataChannelManager}!getAllChannels@{getAllChannels}}
+\index{getAllChannels@{getAllChannels}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{getAllChannels()}{getAllChannels()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classDataChannel}{Data\+Channel}} $>$ Data\+Channel\+Manager\+::get\+All\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a vector of all registered data channels. 
+
+\begin{DoxyReturn}{Returns}
+Vector of all \mbox{\hyperlink{classDataChannel}{Data\+Channel}} objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_a523a55ba5c2f31026680f7aa7ab0e318}\label{classDataChannelManager_a523a55ba5c2f31026680f7aa7ab0e318}} 
+\index{DataChannelManager@{DataChannelManager}!getChannel@{getChannel}}
+\index{getChannel@{getChannel}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{getChannel()}{getChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDataChannel}{Data\+Channel}} $\ast$ Data\+Channel\+Manager\+::get\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{channel\+Id }\end{DoxyParamCaption})}
+
+
+
+Gets a pointer to a specific data channel by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Id} & The ID of the data channel to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the requested \mbox{\hyperlink{classDataChannel}{Data\+Channel}}, or nullptr if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_a9025a3775e2438a3784d89e903596b57}\label{classDataChannelManager_a9025a3775e2438a3784d89e903596b57}} 
+\index{DataChannelManager@{DataChannelManager}!getChannelMap@{getChannelMap}}
+\index{getChannelMap@{getChannelMap}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{getChannelMap()}{getChannelMap()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::string, \mbox{\hyperlink{classDataChannel}{Data\+Channel}} $>$ \& Data\+Channel\+Manager\+::get\+Channel\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets a map of all registered data channels. 
+
+\begin{DoxyReturn}{Returns}
+Map of data channels, where keys are channel IDs and values are \mbox{\hyperlink{classDataChannel}{Data\+Channel}} objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_afb48a0780219db222e2d105623782ebf}\label{classDataChannelManager_afb48a0780219db222e2d105623782ebf}} 
+\index{DataChannelManager@{DataChannelManager}!getGlobalTickTime@{getGlobalTickTime}}
+\index{getGlobalTickTime@{getGlobalTickTime}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{getGlobalTickTime()}{getGlobalTickTime()}}
+{\footnotesize\ttfamily int Data\+Channel\+Manager\+::get\+Global\+Tick\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the global tick time for data channel publication. 
+
+\begin{DoxyReturn}{Returns}
+The global tick time in milliseconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_aecd6bf46dbee7dc4b8496c360c52e3a2}\label{classDataChannelManager_aecd6bf46dbee7dc4b8496c360c52e3a2}} 
+\index{DataChannelManager@{DataChannelManager}!publish@{publish}}
+\index{publish@{publish}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily bool Data\+Channel\+Manager\+::publish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Publishes data for all registered data channels. 
+
+\begin{DoxyReturn}{Returns}
+True if successful (though success doesn\textquotesingle{}t necessarily mean data was published), false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_a485c2117d3f48d4241237d54f743f755}\label{classDataChannelManager_a485c2117d3f48d4241237d54f743f755}} 
+\index{DataChannelManager@{DataChannelManager}!removeChannel@{removeChannel}}
+\index{removeChannel@{removeChannel}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{removeChannel()}{removeChannel()}}
+{\footnotesize\ttfamily bool Data\+Channel\+Manager\+::remove\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{channel\+Id }\end{DoxyParamCaption})}
+
+
+
+Removes a data channel from the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+Id} & The ID of the data channel to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannelManager_a8703d69d6eb0c91274046c15b57323bf}\label{classDataChannelManager_a8703d69d6eb0c91274046c15b57323bf}} 
+\index{DataChannelManager@{DataChannelManager}!setGlobalTickTime@{setGlobalTickTime}}
+\index{setGlobalTickTime@{setGlobalTickTime}!DataChannelManager@{DataChannelManager}}
+\doxysubsubsection{\texorpdfstring{setGlobalTickTime()}{setGlobalTickTime()}}
+{\footnotesize\ttfamily void Data\+Channel\+Manager\+::set\+Global\+Tick\+Time (\begin{DoxyParamCaption}\item[{int}]{tick\+Time }\end{DoxyParamCaption})}
+
+
+
+Sets a custom global tick time for data channel publication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tick\+Time} & The custom tick time in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+transmitter/Data\+Channel\+Manager.\+h\item 
+src/data\+\_\+transmitter/Data\+Channel\+Manager.\+cpp\end{DoxyCompactItemize}

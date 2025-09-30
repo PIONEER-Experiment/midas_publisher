@@ -1,0 +1,71 @@
+\hypertarget{classMidasOdbProcessor}{}\doxysection{Midas\+Odb\+Processor Class Reference}
+\label{classMidasOdbProcessor}\index{MidasOdbProcessor@{MidasOdbProcessor}}
+Inheritance diagram for Midas\+Odb\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMidasOdbProcessor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMidasOdbProcessor_a8b5f01e8ee03456528bddd0836060928}\label{classMidasOdbProcessor_a8b5f01e8ee03456528bddd0836060928}} 
+{\bfseries Midas\+Odb\+Processor} (int \mbox{\hyperlink{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}{verbose}}=0)
+\item 
+\mbox{\Hypertarget{classMidasOdbProcessor_a240c366b29eb1568fc2aa662834221b1}\label{classMidasOdbProcessor_a240c366b29eb1568fc2aa662834221b1}} 
+void {\bfseries Init} (const nlohmann\+::json \&midas\+\_\+receiver\+\_\+config)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMidasOdbProcessor_aa6f9487128e905f43f644560181c1586}{get\+Processed\+Output}} () override
+\begin{DoxyCompactList}\small\item\em Gets the processed output as a vector of strings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMidasOdbProcessor_a892719668792d9d1394c7b054333b812}{is\+Ready\+To\+Process}} () const override
+\begin{DoxyCompactList}\small\item\em Checks if the processor is ready to process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMidasOdbProcessor_aa6f9487128e905f43f644560181c1586}\label{classMidasOdbProcessor_aa6f9487128e905f43f644560181c1586}} 
+\index{MidasOdbProcessor@{MidasOdbProcessor}!getProcessedOutput@{getProcessedOutput}}
+\index{getProcessedOutput@{getProcessedOutput}!MidasOdbProcessor@{MidasOdbProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedOutput()}{getProcessedOutput()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Midas\+Odb\+Processor\+::get\+Processed\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the processed output as a vector of strings. 
+
+\begin{DoxyReturn}{Returns}
+Vector of strings representing the processed output.
+\end{DoxyReturn}
+The vector of strings is added to the circular buffer to be published. So an array of length 2 will add 2 entries to the circular buffer, for example. Empty arrays will not be added to the circular buffer and will therefore not but published. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}{General\+Processor}}.
+
+\mbox{\Hypertarget{classMidasOdbProcessor_a892719668792d9d1394c7b054333b812}\label{classMidasOdbProcessor_a892719668792d9d1394c7b054333b812}} 
+\index{MidasOdbProcessor@{MidasOdbProcessor}!isReadyToProcess@{isReadyToProcess}}
+\index{isReadyToProcess@{isReadyToProcess}!MidasOdbProcessor@{MidasOdbProcessor}}
+\doxysubsubsection{\texorpdfstring{isReadyToProcess()}{isReadyToProcess()}}
+{\footnotesize\ttfamily bool Midas\+Odb\+Processor\+::is\+Ready\+To\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the processor is ready to process. 
+
+\begin{DoxyReturn}{Returns}
+True if ready to process, false otherwise.
+\end{DoxyReturn}
+get\+Processed\+Output will not be called unless this is true. By default, this method always returns true. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}{General\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/processors/Midas\+Odb\+Processor.\+h\item 
+src/processors/Midas\+Odb\+Processor.\+cpp\end{DoxyCompactItemize}

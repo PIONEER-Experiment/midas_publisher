@@ -1,0 +1,178 @@
+\hypertarget{classCommandProcessor}{}\doxysection{Command\+Processor Class Reference}
+\label{classCommandProcessor}\index{CommandProcessor@{CommandProcessor}}
+
+
+A processor that executes commands and processes their output.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Processor.\+h$>$}
+
+Inheritance diagram for Command\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCommandProcessor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommandProcessor_a8efe4696ca63e76dfabe66a5e1ae975c}{Command\+Processor}} (int \mbox{\hyperlink{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}{verbose}}=0, const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \&runner=\mbox{\hyperlink{classCommandRunner}{Command\+Runner}}(\char`\"{}\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandProcessor_a567d3d2e76bcfa2b8780dca68e74d641}\label{classCommandProcessor_a567d3d2e76bcfa2b8780dca68e74d641}} 
+\mbox{\hyperlink{classCommandProcessor_a567d3d2e76bcfa2b8780dca68e74d641}{$\sim$\+Command\+Processor}} () override
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCommandProcessor_ae1415f17b13b6017839e1dff5c384e2c}{get\+Processed\+Output}} () override
+\begin{DoxyCompactList}\small\item\em Gets the processed output after executing the command. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCommandProcessor_af344f7b0c5ee1bf8b6f675135ff0a7c5}{set\+Command\+Runner}} (const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \&runner)
+\begin{DoxyCompactList}\small\item\em Sets the command runner for executing commands. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \& \mbox{\hyperlink{classCommandProcessor_ad0beedad9b0535415eaf8762dbc32d34}{get\+Command\+Runner}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current command runner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCommandProcessor_ae1b2f30c9de7dcfad246f4612afe7bb8}{is\+Ready\+To\+Process}} () const override
+\begin{DoxyCompactList}\small\item\em Checks if the processor is ready to process. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCommandProcessor_abb5a1f0942b285a0ae06b6cbce225621}{get\+Period}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the processing period for the \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCommandProcessor_a6366c78835ecc66e0dcfa3094a194de2}{set\+Period}} (int new\+Period) override
+\begin{DoxyCompactList}\small\item\em Sets the processing period for the \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommandProcessor_a136f0b6c6c6133675ce7aa22d582128e}\label{classCommandProcessor_a136f0b6c6c6133675ce7aa22d582128e}} 
+\mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \mbox{\hyperlink{classCommandProcessor_a136f0b6c6c6133675ce7aa22d582128e}{command\+Runner}}
+\begin{DoxyCompactList}\small\item\em The command runner responsible for executing commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A processor that executes commands and processes their output. 
+
+The {\ttfamily \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}} class is a specialization of {\ttfamily \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}} that executes commands using a {\ttfamily \mbox{\hyperlink{classCommandRunner}{Command\+Runner}}} and processes the command output. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommandProcessor_a8efe4696ca63e76dfabe66a5e1ae975c}\label{classCommandProcessor_a8efe4696ca63e76dfabe66a5e1ae975c}} 
+\index{CommandProcessor@{CommandProcessor}!CommandProcessor@{CommandProcessor}}
+\index{CommandProcessor@{CommandProcessor}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{CommandProcessor()}{CommandProcessor()}}
+{\footnotesize\ttfamily Command\+Processor\+::\+Command\+Processor (\begin{DoxyParamCaption}\item[{int}]{verbose = {\ttfamily 0},  }\item[{const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \&}]{runner = {\ttfamily \mbox{\hyperlink{classCommandRunner}{Command\+Runner}}(\char`\"{}\char`\"{})} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & The verbosity level for logging (default is 0). \\
+\hline
+{\em runner} & The command runner responsible for executing commands (default is an empty runner). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommandProcessor_ad0beedad9b0535415eaf8762dbc32d34}\label{classCommandProcessor_ad0beedad9b0535415eaf8762dbc32d34}} 
+\index{CommandProcessor@{CommandProcessor}!getCommandRunner@{getCommandRunner}}
+\index{getCommandRunner@{getCommandRunner}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{getCommandRunner()}{getCommandRunner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \& Command\+Processor\+::get\+Command\+Runner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current command runner. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the current command runner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandProcessor_abb5a1f0942b285a0ae06b6cbce225621}\label{classCommandProcessor_abb5a1f0942b285a0ae06b6cbce225621}} 
+\index{CommandProcessor@{CommandProcessor}!getPeriod@{getPeriod}}
+\index{getPeriod@{getPeriod}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{getPeriod()}{getPeriod()}}
+{\footnotesize\ttfamily int Command\+Processor\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the processing period for the \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. 
+
+\begin{DoxyReturn}{Returns}
+The processing period. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_a8d3433cced851b340d3a2b41bc031a32}{General\+Processor}}.
+
+\mbox{\Hypertarget{classCommandProcessor_ae1415f17b13b6017839e1dff5c384e2c}\label{classCommandProcessor_ae1415f17b13b6017839e1dff5c384e2c}} 
+\index{CommandProcessor@{CommandProcessor}!getProcessedOutput@{getProcessedOutput}}
+\index{getProcessedOutput@{getProcessedOutput}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedOutput()}{getProcessedOutput()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Command\+Processor\+::get\+Processed\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the processed output after executing the command. 
+
+\begin{DoxyReturn}{Returns}
+Vector of strings representing the processed output. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}{General\+Processor}}.
+
+\mbox{\Hypertarget{classCommandProcessor_ae1b2f30c9de7dcfad246f4612afe7bb8}\label{classCommandProcessor_ae1b2f30c9de7dcfad246f4612afe7bb8}} 
+\index{CommandProcessor@{CommandProcessor}!isReadyToProcess@{isReadyToProcess}}
+\index{isReadyToProcess@{isReadyToProcess}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{isReadyToProcess()}{isReadyToProcess()}}
+{\footnotesize\ttfamily bool Command\+Processor\+::is\+Ready\+To\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the processor is ready to process. 
+
+\begin{DoxyReturn}{Returns}
+True if ready to process, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}{General\+Processor}}.
+
+\mbox{\Hypertarget{classCommandProcessor_af344f7b0c5ee1bf8b6f675135ff0a7c5}\label{classCommandProcessor_af344f7b0c5ee1bf8b6f675135ff0a7c5}} 
+\index{CommandProcessor@{CommandProcessor}!setCommandRunner@{setCommandRunner}}
+\index{setCommandRunner@{setCommandRunner}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{setCommandRunner()}{setCommandRunner()}}
+{\footnotesize\ttfamily void Command\+Processor\+::set\+Command\+Runner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} \&}]{runner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the command runner for executing commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em runner} & The command runner to set.\\
+\hline
+\end{DoxyParams}
+The command runner class gets automatically generated and set based on the config. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelManager_aacbb944add821588a735a0516888b931}{Data\+Channel\+Manager\+::add\+Channel}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classCommandProcessor_a6366c78835ecc66e0dcfa3094a194de2}\label{classCommandProcessor_a6366c78835ecc66e0dcfa3094a194de2}} 
+\index{CommandProcessor@{CommandProcessor}!setPeriod@{setPeriod}}
+\index{setPeriod@{setPeriod}!CommandProcessor@{CommandProcessor}}
+\doxysubsubsection{\texorpdfstring{setPeriod()}{setPeriod()}}
+{\footnotesize\ttfamily void Command\+Processor\+::set\+Period (\begin{DoxyParamCaption}\item[{int}]{new\+Period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the processing period for the \mbox{\hyperlink{classCommandProcessor}{Command\+Processor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Period} & The new processing period. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ae57c2ab2c7cc2a67fd535d388c39e3de}{General\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/processors/Command\+Processor.\+h\item 
+src/processors/Command\+Processor.\+cpp\end{DoxyCompactItemize}

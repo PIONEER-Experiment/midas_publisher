@@ -1,0 +1,171 @@
+\hypertarget{classCommandRunner}{}\doxysection{Command\+Runner Class Reference}
+\label{classCommandRunner}\index{CommandRunner@{CommandRunner}}
+
+
+A utility class for executing commands and managing execution parameters.  
+
+
+
+
+{\ttfamily \#include $<$Command\+Runner.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCommandRunner_a9e642e4704b083084100ded9357e098a}{Command\+Runner}} (const std\+::string \&command)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} with a single command. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCommandRunner_a253f130e48e007bfef6160e4907f25a9}{Command\+Runner}} (const std\+::vector$<$ std\+::string $>$ \&command\+With\+Args)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} with a command and arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCommandRunner_aa9f4aec533d160749766ae4d27b5fca5}{add\+Argument}} (const std\+::string \&arg)
+\begin{DoxyCompactList}\small\item\em Adds an argument to the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCommandRunner_a962a39f1d12393211becfbf7f0ae123f}{set\+Wait\+Time}} (int milliseconds)
+\begin{DoxyCompactList}\small\item\em Sets the wait time in milliseconds between command executions. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCommandRunner_a75a0a138a720cf56f94409f78891c4b0}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the command and returns the output. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCommandRunner_aff2a413e8906cbbc3fdb2f068eba82a4}{is\+Ready\+For\+Execution}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} is ready for execution based on the wait time. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCommandRunner_a5291947ab30c5a95d29d1001a4e62d62}{get\+Command}} () const
+\begin{DoxyCompactList}\small\item\em Gets the original command as a string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCommandRunner_ade5c8ac5e7a7a5f9d8a55843d67e914a}{get\+Wait\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the wait time between command executions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommandRunner_a698a3db746e478a8f8473aefba861c12}\label{classCommandRunner_a698a3db746e478a8f8473aefba861c12}} 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classCommandRunner_a698a3db746e478a8f8473aefba861c12}{command\+With\+Args\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The command and its arguments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandRunner_a9e1bf64d642a722eea30601df75fac2a}\label{classCommandRunner_a9e1bf64d642a722eea30601df75fac2a}} 
+int \mbox{\hyperlink{classCommandRunner_a9e1bf64d642a722eea30601df75fac2a}{wait\+Time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The wait time between command executions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCommandRunner_a13fbe69bf315d3016b7dbcc75b71247b}\label{classCommandRunner_a13fbe69bf315d3016b7dbcc75b71247b}} 
+std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::high\+\_\+resolution\+\_\+clock $>$ \mbox{\hyperlink{classCommandRunner_a13fbe69bf315d3016b7dbcc75b71247b}{last\+Execution\+Time}}
+\begin{DoxyCompactList}\small\item\em Timestamp of the last execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A utility class for executing commands and managing execution parameters. 
+
+The {\ttfamily \mbox{\hyperlink{classCommandRunner}{Command\+Runner}}} class provides functionality to execute commands with optional arguments and manage execution parameters such as wait time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCommandRunner_a9e642e4704b083084100ded9357e098a}\label{classCommandRunner_a9e642e4704b083084100ded9357e098a}} 
+\index{CommandRunner@{CommandRunner}!CommandRunner@{CommandRunner}}
+\index{CommandRunner@{CommandRunner}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{CommandRunner()}{CommandRunner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Command\+Runner\+::\+Command\+Runner (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{command }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} with a single command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to execute. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCommandRunner_a253f130e48e007bfef6160e4907f25a9}\label{classCommandRunner_a253f130e48e007bfef6160e4907f25a9}} 
+\index{CommandRunner@{CommandRunner}!CommandRunner@{CommandRunner}}
+\index{CommandRunner@{CommandRunner}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{CommandRunner()}{CommandRunner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Command\+Runner\+::\+Command\+Runner (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{command\+With\+Args }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} with a command and arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+With\+Args} & The command and its arguments as a vector of strings. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommandRunner_aa9f4aec533d160749766ae4d27b5fca5}\label{classCommandRunner_aa9f4aec533d160749766ae4d27b5fca5}} 
+\index{CommandRunner@{CommandRunner}!addArgument@{addArgument}}
+\index{addArgument@{addArgument}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{addArgument()}{addArgument()}}
+{\footnotesize\ttfamily void Command\+Runner\+::add\+Argument (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{arg }\end{DoxyParamCaption})}
+
+
+
+Adds an argument to the command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & The argument to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCommandRunner_a75a0a138a720cf56f94409f78891c4b0}\label{classCommandRunner_a75a0a138a720cf56f94409f78891c4b0}} 
+\index{CommandRunner@{CommandRunner}!execute@{execute}}
+\index{execute@{execute}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily std\+::string Command\+Runner\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executes the command and returns the output. 
+
+\begin{DoxyReturn}{Returns}
+The output of the executed command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandRunner_a5291947ab30c5a95d29d1001a4e62d62}\label{classCommandRunner_a5291947ab30c5a95d29d1001a4e62d62}} 
+\index{CommandRunner@{CommandRunner}!getCommand@{getCommand}}
+\index{getCommand@{getCommand}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{getCommand()}{getCommand()}}
+{\footnotesize\ttfamily std\+::string Command\+Runner\+::get\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the original command as a string. 
+
+\begin{DoxyReturn}{Returns}
+The original command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandRunner_ade5c8ac5e7a7a5f9d8a55843d67e914a}\label{classCommandRunner_ade5c8ac5e7a7a5f9d8a55843d67e914a}} 
+\index{CommandRunner@{CommandRunner}!getWaitTime@{getWaitTime}}
+\index{getWaitTime@{getWaitTime}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{getWaitTime()}{getWaitTime()}}
+{\footnotesize\ttfamily int Command\+Runner\+::get\+Wait\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the wait time between command executions. 
+
+\begin{DoxyReturn}{Returns}
+The wait time in milliseconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandRunner_aff2a413e8906cbbc3fdb2f068eba82a4}\label{classCommandRunner_aff2a413e8906cbbc3fdb2f068eba82a4}} 
+\index{CommandRunner@{CommandRunner}!isReadyForExecution@{isReadyForExecution}}
+\index{isReadyForExecution@{isReadyForExecution}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{isReadyForExecution()}{isReadyForExecution()}}
+{\footnotesize\ttfamily bool Command\+Runner\+::is\+Ready\+For\+Execution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the \mbox{\hyperlink{classCommandRunner}{Command\+Runner}} is ready for execution based on the wait time. 
+
+\begin{DoxyReturn}{Returns}
+True if ready for execution, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCommandRunner_a962a39f1d12393211becfbf7f0ae123f}\label{classCommandRunner_a962a39f1d12393211becfbf7f0ae123f}} 
+\index{CommandRunner@{CommandRunner}!setWaitTime@{setWaitTime}}
+\index{setWaitTime@{setWaitTime}!CommandRunner@{CommandRunner}}
+\doxysubsubsection{\texorpdfstring{setWaitTime()}{setWaitTime()}}
+{\footnotesize\ttfamily void Command\+Runner\+::set\+Wait\+Time (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+
+
+Sets the wait time in milliseconds between command executions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em milliseconds} & The wait time in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/command\+\_\+management/Command\+Runner.\+h\item 
+src/command\+\_\+management/Command\+Runner.\+cpp\end{DoxyCompactItemize}

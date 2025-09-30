@@ -1,0 +1,345 @@
+\hypertarget{classDataChannel}{}\doxysection{Data\+Channel Class Reference}
+\label{classDataChannel}\index{DataChannel@{DataChannel}}
+
+
+Represents a data channel for publishing events.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Channel.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataChannel_a44413122b5ae4f88340adee334dd392e}\label{classDataChannel_a44413122b5ae4f88340adee334dd392e}} 
+\mbox{\hyperlink{classDataChannel_a44413122b5ae4f88340adee334dd392e}{Data\+Channel}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classDataChannel}{Data\+Channel}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDataChannel_afddd4706fd837ed68f509425bc3a6b66}{Data\+Channel}} (const std\+::string \&name, int events\+Before\+Break, int events\+To\+Ignore\+In\+Break)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataChannel}{Data\+Channel}} with specified attributes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDataChannel_aede3c0b8afa801ffd300d65fb91e9fdd}{Data\+Channel}} (const std\+::string \&name, int events\+Before\+Break, int events\+To\+Ignore\+In\+Break, const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataChannel}{Data\+Channel}} with specified attributes and address. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataChannel_ab9e138d3332e8c540bb1769c4dab8517}{publish}} ()
+\begin{DoxyCompactList}\small\item\em Publishes events for the data channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_ab5f6bc6ce5d7f83a26598069df067c5f}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the data channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_a640900fcffff28e003bc0a34e6d4d68a}{set\+Events\+Before\+Break}} (int events\+Before\+Break)
+\begin{DoxyCompactList}\small\item\em Sets the number of events before taking a break. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_ab7faf42f153cdae64b36ed8f0f723dca}{set\+Events\+To\+Ignore\+In\+Break}} (int events\+To\+Ignore\+In\+Break)
+\begin{DoxyCompactList}\small\item\em Sets the number of events to ignore during a break. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_a293e391e94c5920151a531078ecf9891}{set\+Address}} (const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em Sets the address associated with the data channel. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classDataChannel_aec020d154f233b2873708a3123378040}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the data channel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_ad42b27120b73d4a5fe17acc52269d37a}{get\+Events\+Before\+Break}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of events before taking a break. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_a6f8981227b1c9345847aa0a8d715b072}{get\+Events\+To\+Ignore\+In\+Break}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of events to ignore during a break. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classDataChannel_ae2b355c0cc2684c35257bcee6b8a9ba5}{get\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Gets the address associated with the data channel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_a940ce0e07433910d1648a7eab5151903}{get\+Events\+Published}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of events published. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_a49b993d93406299654b8707ecbbcc867}{get\+Events\+Seen}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of events seen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDataChannel_ac6b307906f4ea74ec5774fb5a5cfe98d}{is\+On\+Break}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the data channel is on break. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_a0e58d89fd9f8a7b21c25f10c6ef3b70e}{get\+Events\+Seen\+On\+Break}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of events seen during a break. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDataChannel_a1b3c25b7bd5a39cf1d5c0cf73954e307}{get\+Tick\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the tick time for the data channel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannel_abbc3db6f855eaf66d24d1e949206d4be}\label{classDataChannel_abbc3db6f855eaf66d24d1e949206d4be}} 
+void \mbox{\hyperlink{classDataChannel_abbc3db6f855eaf66d24d1e949206d4be}{published}} ()
+\begin{DoxyCompactList}\small\item\em Increments the count of events published. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannel_ad543e7e4d545398af8301a1058a82ffa}\label{classDataChannel_ad543e7e4d545398af8301a1058a82ffa}} 
+void \mbox{\hyperlink{classDataChannel_ad543e7e4d545398af8301a1058a82ffa}{seen}} ()
+\begin{DoxyCompactList}\small\item\em Increments the count of events seen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannel_a22c6f710885f7da6e9a2061d1ad0aa51}\label{classDataChannel_a22c6f710885f7da6e9a2061d1ad0aa51}} 
+void \mbox{\hyperlink{classDataChannel_a22c6f710885f7da6e9a2061d1ad0aa51}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the data channel attributes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannel_afc0339990bfb5272009c9443d13e5396}\label{classDataChannel_afc0339990bfb5272009c9443d13e5396}} 
+void \mbox{\hyperlink{classDataChannel_afc0339990bfb5272009c9443d13e5396}{print\+Attributes}} () const
+\begin{DoxyCompactList}\small\item\em Prints the attributes of the data channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_acacc333d8c6b849b51a5c0273d4bb14d}{set\+Data\+Channel\+Processes\+Manager}} (\mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}} manager)
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}} for the data channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataChannel_afe2cb5dce4644c9f25833a8cdd20daa4}{add\+Process\+To\+Manager}} (\mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$processor)
+\begin{DoxyCompactList}\small\item\em Adds a \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} to the \mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataChannel_a56b133d321b5d9279b43f7cbe5730896}\label{classDataChannel_a56b133d321b5d9279b43f7cbe5730896}} 
+void \mbox{\hyperlink{classDataChannel_a56b133d321b5d9279b43f7cbe5730896}{update\+Tick\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Updates the tick time for the data channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a data channel for publishing events. 
+
+The {\ttfamily \mbox{\hyperlink{classDataChannel}{Data\+Channel}}} class manages the publication of events for a specific channel. It tracks the number of events published, events seen, and provides functionality for handling breaks in event publication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataChannel_afddd4706fd837ed68f509425bc3a6b66}\label{classDataChannel_afddd4706fd837ed68f509425bc3a6b66}} 
+\index{DataChannel@{DataChannel}!DataChannel@{DataChannel}}
+\index{DataChannel@{DataChannel}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{DataChannel()}{DataChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Data\+Channel\+::\+Data\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{events\+Before\+Break,  }\item[{int}]{events\+To\+Ignore\+In\+Break }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classDataChannel}{Data\+Channel}} with specified attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the data channel. \\
+\hline
+{\em events\+Before\+Break} & The number of events before taking a break. \\
+\hline
+{\em events\+To\+Ignore\+In\+Break} & The number of events to ignore during a break. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_aede3c0b8afa801ffd300d65fb91e9fdd}\label{classDataChannel_aede3c0b8afa801ffd300d65fb91e9fdd}} 
+\index{DataChannel@{DataChannel}!DataChannel@{DataChannel}}
+\index{DataChannel@{DataChannel}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{DataChannel()}{DataChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Data\+Channel\+::\+Data\+Channel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{events\+Before\+Break,  }\item[{int}]{events\+To\+Ignore\+In\+Break,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classDataChannel}{Data\+Channel}} with specified attributes and address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the data channel. \\
+\hline
+{\em events\+Before\+Break} & The number of events before taking a break. \\
+\hline
+{\em events\+To\+Ignore\+In\+Break} & The number of events to ignore during a break. \\
+\hline
+{\em address} & The address associated with the data channel. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataChannel_afe2cb5dce4644c9f25833a8cdd20daa4}\label{classDataChannel_afe2cb5dce4644c9f25833a8cdd20daa4}} 
+\index{DataChannel@{DataChannel}!addProcessToManager@{addProcessToManager}}
+\index{addProcessToManager@{addProcessToManager}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{addProcessToManager()}{addProcessToManager()}}
+{\footnotesize\ttfamily void Data\+Channel\+::add\+Process\+To\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} $\ast$}]{processor }\end{DoxyParamCaption})}
+
+
+
+Adds a \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} to the \mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em processor} & Pointer to the \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}} to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_ae2b355c0cc2684c35257bcee6b8a9ba5}\label{classDataChannel_ae2b355c0cc2684c35257bcee6b8a9ba5}} 
+\index{DataChannel@{DataChannel}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily const std\+::string \& Data\+Channel\+::get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the address associated with the data channel. 
+
+\begin{DoxyReturn}{Returns}
+The address associated with the data channel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_ad42b27120b73d4a5fe17acc52269d37a}\label{classDataChannel_ad42b27120b73d4a5fe17acc52269d37a}} 
+\index{DataChannel@{DataChannel}!getEventsBeforeBreak@{getEventsBeforeBreak}}
+\index{getEventsBeforeBreak@{getEventsBeforeBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getEventsBeforeBreak()}{getEventsBeforeBreak()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Events\+Before\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of events before taking a break. 
+
+\begin{DoxyReturn}{Returns}
+The number of events before taking a break. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a940ce0e07433910d1648a7eab5151903}\label{classDataChannel_a940ce0e07433910d1648a7eab5151903}} 
+\index{DataChannel@{DataChannel}!getEventsPublished@{getEventsPublished}}
+\index{getEventsPublished@{getEventsPublished}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getEventsPublished()}{getEventsPublished()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Events\+Published (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of events published. 
+
+\begin{DoxyReturn}{Returns}
+The number of events published. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a49b993d93406299654b8707ecbbcc867}\label{classDataChannel_a49b993d93406299654b8707ecbbcc867}} 
+\index{DataChannel@{DataChannel}!getEventsSeen@{getEventsSeen}}
+\index{getEventsSeen@{getEventsSeen}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getEventsSeen()}{getEventsSeen()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Events\+Seen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of events seen. 
+
+\begin{DoxyReturn}{Returns}
+The number of events seen. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a0e58d89fd9f8a7b21c25f10c6ef3b70e}\label{classDataChannel_a0e58d89fd9f8a7b21c25f10c6ef3b70e}} 
+\index{DataChannel@{DataChannel}!getEventsSeenOnBreak@{getEventsSeenOnBreak}}
+\index{getEventsSeenOnBreak@{getEventsSeenOnBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getEventsSeenOnBreak()}{getEventsSeenOnBreak()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Events\+Seen\+On\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of events seen during a break. 
+
+\begin{DoxyReturn}{Returns}
+The number of events seen during a break. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a6f8981227b1c9345847aa0a8d715b072}\label{classDataChannel_a6f8981227b1c9345847aa0a8d715b072}} 
+\index{DataChannel@{DataChannel}!getEventsToIgnoreInBreak@{getEventsToIgnoreInBreak}}
+\index{getEventsToIgnoreInBreak@{getEventsToIgnoreInBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getEventsToIgnoreInBreak()}{getEventsToIgnoreInBreak()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Events\+To\+Ignore\+In\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of events to ignore during a break. 
+
+\begin{DoxyReturn}{Returns}
+The number of events to ignore during a break. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_aec020d154f233b2873708a3123378040}\label{classDataChannel_aec020d154f233b2873708a3123378040}} 
+\index{DataChannel@{DataChannel}!getName@{getName}}
+\index{getName@{getName}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& Data\+Channel\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the data channel. 
+
+\begin{DoxyReturn}{Returns}
+The name of the data channel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a1b3c25b7bd5a39cf1d5c0cf73954e307}\label{classDataChannel_a1b3c25b7bd5a39cf1d5c0cf73954e307}} 
+\index{DataChannel@{DataChannel}!getTickTime@{getTickTime}}
+\index{getTickTime@{getTickTime}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{getTickTime()}{getTickTime()}}
+{\footnotesize\ttfamily int Data\+Channel\+::get\+Tick\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the tick time for the data channel. 
+
+\begin{DoxyReturn}{Returns}
+The tick time in milliseconds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_ac6b307906f4ea74ec5774fb5a5cfe98d}\label{classDataChannel_ac6b307906f4ea74ec5774fb5a5cfe98d}} 
+\index{DataChannel@{DataChannel}!isOnBreak@{isOnBreak}}
+\index{isOnBreak@{isOnBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{isOnBreak()}{isOnBreak()}}
+{\footnotesize\ttfamily bool Data\+Channel\+::is\+On\+Break (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the data channel is on break. 
+
+\begin{DoxyReturn}{Returns}
+True if on break, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_ab9e138d3332e8c540bb1769c4dab8517}\label{classDataChannel_ab9e138d3332e8c540bb1769c4dab8517}} 
+\index{DataChannel@{DataChannel}!publish@{publish}}
+\index{publish@{publish}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily bool Data\+Channel\+::publish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Publishes events for the data channel. 
+
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataChannel_a293e391e94c5920151a531078ecf9891}\label{classDataChannel_a293e391e94c5920151a531078ecf9891}} 
+\index{DataChannel@{DataChannel}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily void Data\+Channel\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+Sets the address associated with the data channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_acacc333d8c6b849b51a5c0273d4bb14d}\label{classDataChannel_acacc333d8c6b849b51a5c0273d4bb14d}} 
+\index{DataChannel@{DataChannel}!setDataChannelProcessesManager@{setDataChannelProcessesManager}}
+\index{setDataChannelProcessesManager@{setDataChannelProcessesManager}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{setDataChannelProcessesManager()}{setDataChannelProcessesManager()}}
+{\footnotesize\ttfamily void Data\+Channel\+::set\+Data\+Channel\+Processes\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}}}]{manager }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}} for the data channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & The \mbox{\hyperlink{classDataChannelProcessesManager}{Data\+Channel\+Processes\+Manager}} to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_a640900fcffff28e003bc0a34e6d4d68a}\label{classDataChannel_a640900fcffff28e003bc0a34e6d4d68a}} 
+\index{DataChannel@{DataChannel}!setEventsBeforeBreak@{setEventsBeforeBreak}}
+\index{setEventsBeforeBreak@{setEventsBeforeBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{setEventsBeforeBreak()}{setEventsBeforeBreak()}}
+{\footnotesize\ttfamily void Data\+Channel\+::set\+Events\+Before\+Break (\begin{DoxyParamCaption}\item[{int}]{events\+Before\+Break }\end{DoxyParamCaption})}
+
+
+
+Sets the number of events before taking a break. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em events\+Before\+Break} & The number of events before taking a break. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_ab7faf42f153cdae64b36ed8f0f723dca}\label{classDataChannel_ab7faf42f153cdae64b36ed8f0f723dca}} 
+\index{DataChannel@{DataChannel}!setEventsToIgnoreInBreak@{setEventsToIgnoreInBreak}}
+\index{setEventsToIgnoreInBreak@{setEventsToIgnoreInBreak}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{setEventsToIgnoreInBreak()}{setEventsToIgnoreInBreak()}}
+{\footnotesize\ttfamily void Data\+Channel\+::set\+Events\+To\+Ignore\+In\+Break (\begin{DoxyParamCaption}\item[{int}]{events\+To\+Ignore\+In\+Break }\end{DoxyParamCaption})}
+
+
+
+Sets the number of events to ignore during a break. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em events\+To\+Ignore\+In\+Break} & The number of events to ignore during a break. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataChannel_ab5f6bc6ce5d7f83a26598069df067c5f}\label{classDataChannel_ab5f6bc6ce5d7f83a26598069df067c5f}} 
+\index{DataChannel@{DataChannel}!setName@{setName}}
+\index{setName@{setName}!DataChannel@{DataChannel}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Data\+Channel\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the data channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+transmitter/Data\+Channel.\+h\item 
+src/data\+\_\+transmitter/Data\+Channel.\+cpp\end{DoxyCompactItemize}

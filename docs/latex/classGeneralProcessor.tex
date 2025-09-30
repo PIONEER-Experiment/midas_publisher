@@ -1,0 +1,169 @@
+\hypertarget{classGeneralProcessor}{}\doxysection{General\+Processor Class Reference}
+\label{classGeneralProcessor}\index{GeneralProcessor@{GeneralProcessor}}
+
+
+An abstract base class representing a general processor.  
+
+
+
+
+{\ttfamily \#include $<$General\+Processor.\+h$>$}
+
+Inheritance diagram for General\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGeneralProcessor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneralProcessor_ae1eda776118e36f2062b1f16218e0cd8}{General\+Processor}} (int \mbox{\hyperlink{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}{verbose}}=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGeneralProcessor_ab47d044510246854b37128a6915c9164}\label{classGeneralProcessor_ab47d044510246854b37128a6915c9164}} 
+virtual \mbox{\hyperlink{classGeneralProcessor_ab47d044510246854b37128a6915c9164}{$\sim$\+General\+Processor}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}{get\+Processed\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Gets the processed output as a vector of strings. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}{is\+Ready\+To\+Process}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the processor is ready to process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGeneralProcessor_a676b026a03d5ba50da13d7be5eacd74a}{set\+Verbose}} (int verbose\+Level)
+\begin{DoxyCompactList}\small\item\em Sets the verbosity level for logging. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classGeneralProcessor_a8d3433cced851b340d3a2b41bc031a32}{get\+Period}} () const
+\begin{DoxyCompactList}\small\item\em Gets the processing period. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classGeneralProcessor_ae57c2ab2c7cc2a67fd535d388c39e3de}{set\+Period}} (int new\+Period)
+\begin{DoxyCompactList}\small\item\em Sets the processing period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}\label{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}} 
+int \mbox{\hyperlink{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}{verbose}}
+\begin{DoxyCompactList}\small\item\em Verbosity level for logging. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGeneralProcessor_a064234fe7c1400b0be5247db444367d1}\label{classGeneralProcessor_a064234fe7c1400b0be5247db444367d1}} 
+int \mbox{\hyperlink{classGeneralProcessor_a064234fe7c1400b0be5247db444367d1}{period}}
+\begin{DoxyCompactList}\small\item\em Processing period. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class representing a general processor. 
+
+The {\ttfamily \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}} class defines the common interface for all processor types.
+
+This class serves as a base for various processor implementations. It provides common functionality such as setting verbosity level, getting processed output, and managing processing periods. Derived classes should override specific methods to implement processor-\/specific behavior. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGeneralProcessor_ae1eda776118e36f2062b1f16218e0cd8}\label{classGeneralProcessor_ae1eda776118e36f2062b1f16218e0cd8}} 
+\index{GeneralProcessor@{GeneralProcessor}!GeneralProcessor@{GeneralProcessor}}
+\index{GeneralProcessor@{GeneralProcessor}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{GeneralProcessor()}{GeneralProcessor()}}
+{\footnotesize\ttfamily General\+Processor\+::\+General\+Processor (\begin{DoxyParamCaption}\item[{int}]{verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classGeneralProcessor}{General\+Processor}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & The verbosity level for logging (default is 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneralProcessor_a8d3433cced851b340d3a2b41bc031a32}\label{classGeneralProcessor_a8d3433cced851b340d3a2b41bc031a32}} 
+\index{GeneralProcessor@{GeneralProcessor}!getPeriod@{getPeriod}}
+\index{getPeriod@{getPeriod}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{getPeriod()}{getPeriod()}}
+{\footnotesize\ttfamily int General\+Processor\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the processing period. 
+
+\begin{DoxyReturn}{Returns}
+The processing period. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classCommandProcessor_abb5a1f0942b285a0ae06b6cbce225621}{Command\+Processor}}.
+
+\mbox{\Hypertarget{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}\label{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}} 
+\index{GeneralProcessor@{GeneralProcessor}!getProcessedOutput@{getProcessedOutput}}
+\index{getProcessedOutput@{getProcessedOutput}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedOutput()}{getProcessedOutput()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ General\+Processor\+::get\+Processed\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the processed output as a vector of strings. 
+
+\begin{DoxyReturn}{Returns}
+Vector of strings representing the processed output.
+\end{DoxyReturn}
+The vector of strings is added to the circular buffer to be published. So an array of length 2 will add 2 entries to the circular buffer, for example. Empty arrays will not be added to the circular buffer and will therefore not but published. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classMidasOdbProcessor_aa6f9487128e905f43f644560181c1586}{Midas\+Odb\+Processor}}, \mbox{\hyperlink{classMidasEventProcessor_a20012d6c8e3288a988192a75e18cdf87}{Midas\+Event\+Processor}}, and \mbox{\hyperlink{classCommandProcessor_ae1415f17b13b6017839e1dff5c384e2c}{Command\+Processor}}.
+
+\mbox{\Hypertarget{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}\label{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}} 
+\index{GeneralProcessor@{GeneralProcessor}!isReadyToProcess@{isReadyToProcess}}
+\index{isReadyToProcess@{isReadyToProcess}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{isReadyToProcess()}{isReadyToProcess()}}
+{\footnotesize\ttfamily bool General\+Processor\+::is\+Ready\+To\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks if the processor is ready to process. 
+
+\begin{DoxyReturn}{Returns}
+True if ready to process, false otherwise.
+\end{DoxyReturn}
+get\+Processed\+Output will not be called unless this is true. By default, this method always returns true. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classMidasOdbProcessor_a892719668792d9d1394c7b054333b812}{Midas\+Odb\+Processor}}, \mbox{\hyperlink{classMidasEventProcessor_a35ec058470f1a78ec805d8193587050e}{Midas\+Event\+Processor}}, and \mbox{\hyperlink{classCommandProcessor_ae1b2f30c9de7dcfad246f4612afe7bb8}{Command\+Processor}}.
+
+\mbox{\Hypertarget{classGeneralProcessor_ae57c2ab2c7cc2a67fd535d388c39e3de}\label{classGeneralProcessor_ae57c2ab2c7cc2a67fd535d388c39e3de}} 
+\index{GeneralProcessor@{GeneralProcessor}!setPeriod@{setPeriod}}
+\index{setPeriod@{setPeriod}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{setPeriod()}{setPeriod()}}
+{\footnotesize\ttfamily void General\+Processor\+::set\+Period (\begin{DoxyParamCaption}\item[{int}]{new\+Period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the processing period. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Period} & The new processing period. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classCommandProcessor_a6366c78835ecc66e0dcfa3094a194de2}{Command\+Processor}}.
+
+\mbox{\Hypertarget{classGeneralProcessor_a676b026a03d5ba50da13d7be5eacd74a}\label{classGeneralProcessor_a676b026a03d5ba50da13d7be5eacd74a}} 
+\index{GeneralProcessor@{GeneralProcessor}!setVerbose@{setVerbose}}
+\index{setVerbose@{setVerbose}!GeneralProcessor@{GeneralProcessor}}
+\doxysubsubsection{\texorpdfstring{setVerbose()}{setVerbose()}}
+{\footnotesize\ttfamily void General\+Processor\+::set\+Verbose (\begin{DoxyParamCaption}\item[{int}]{verbose\+Level }\end{DoxyParamCaption})}
+
+
+
+Sets the verbosity level for logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose\+Level} & The new verbosity level. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/processors/General\+Processor.\+h\item 
+src/processors/General\+Processor.\+cpp\end{DoxyCompactItemize}

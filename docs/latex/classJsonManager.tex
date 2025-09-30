@@ -1,0 +1,84 @@
+\hypertarget{classJsonManager}{}\doxysection{Json\+Manager Class Reference}
+\label{classJsonManager}\index{JsonManager@{JsonManager}}
+
+
+A utility class for managing JSON configurations.  
+
+
+
+
+{\ttfamily \#include $<$Json\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classJsonManager_a60379eeadbb62ebe5e2f60f6b4f0c3aa}\label{classJsonManager_a60379eeadbb62ebe5e2f60f6b4f0c3aa}} 
+void \mbox{\hyperlink{classJsonManager_a60379eeadbb62ebe5e2f60f6b4f0c3aa}{load\+Config\+File}} ()
+\begin{DoxyCompactList}\small\item\em Loads the configuration from the specified JSON file. \end{DoxyCompactList}\item 
+const nlohmann\+::json \& \mbox{\hyperlink{classJsonManager_a1e3c26143e45b7869ecb44c2dd1f9b82}{get\+Config}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current configuration as a const reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classJsonManager}{Json\+Manager}} \& \mbox{\hyperlink{classJsonManager_a195c89b9868a39e6dfbacd9a491617d7}{get\+Instance}} (const std\+::string \&config\+File)
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classJsonManager}{Json\+Manager}} with a specified config file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classJsonManager}{Json\+Manager}} \& \mbox{\hyperlink{classJsonManager_a614ccaaeebd7be1f35f12657c988b887}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classJsonManager}{Json\+Manager}} with a default config file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A utility class for managing JSON configurations. 
+
+The {\ttfamily \mbox{\hyperlink{classJsonManager}{Json\+Manager}}} class provides functionality to load and retrieve JSON configurations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonManager_a1e3c26143e45b7869ecb44c2dd1f9b82}\label{classJsonManager_a1e3c26143e45b7869ecb44c2dd1f9b82}} 
+\index{JsonManager@{JsonManager}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!JsonManager@{JsonManager}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily const nlohmann\+::json \& Json\+Manager\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current configuration as a const reference. 
+
+\begin{DoxyReturn}{Returns}
+Const reference to the JSON configuration. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonManager_a614ccaaeebd7be1f35f12657c988b887}\label{classJsonManager_a614ccaaeebd7be1f35f12657c988b887}} 
+\index{JsonManager@{JsonManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!JsonManager@{JsonManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonManager}{Json\+Manager}} \& Json\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classJsonManager}{Json\+Manager}} with a default config file. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classJsonManager_a195c89b9868a39e6dfbacd9a491617d7}\label{classJsonManager_a195c89b9868a39e6dfbacd9a491617d7}} 
+\index{JsonManager@{JsonManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!JsonManager@{JsonManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classJsonManager}{Json\+Manager}} \& Json\+Manager\+::get\+Instance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classJsonManager}{Json\+Manager}} with a specified config file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+File} & The path to the JSON configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/utilities/Json\+Manager.\+h\item 
+src/utilities/Json\+Manager.\+cpp\end{DoxyCompactItemize}

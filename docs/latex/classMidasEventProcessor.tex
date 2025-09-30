@@ -1,0 +1,71 @@
+\hypertarget{classMidasEventProcessor}{}\doxysection{Midas\+Event\+Processor Class Reference}
+\label{classMidasEventProcessor}\index{MidasEventProcessor@{MidasEventProcessor}}
+Inheritance diagram for Midas\+Event\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMidasEventProcessor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMidasEventProcessor_a2fca4ca693895699a951e9a3183ecac7}\label{classMidasEventProcessor_a2fca4ca693895699a951e9a3183ecac7}} 
+{\bfseries Midas\+Event\+Processor} (int \mbox{\hyperlink{classGeneralProcessor_ade0b12d7fec2b58a9782559734b00012}{verbose}}=0)
+\item 
+\mbox{\Hypertarget{classMidasEventProcessor_a6a89e3a11b2d761f187f49b1258bc3d4}\label{classMidasEventProcessor_a6a89e3a11b2d761f187f49b1258bc3d4}} 
+void {\bfseries Init} (const nlohmann\+::json \&midas\+\_\+receiver\+\_\+config, const nlohmann\+::json \&pipeline\+\_\+config, const nlohmann\+::json \&midas\+\_\+event\+\_\+processor\+\_\+config)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMidasEventProcessor_a20012d6c8e3288a988192a75e18cdf87}{get\+Processed\+Output}} () override
+\begin{DoxyCompactList}\small\item\em Gets the processed output as a vector of strings. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMidasEventProcessor_a35ec058470f1a78ec805d8193587050e}{is\+Ready\+To\+Process}} () const override
+\begin{DoxyCompactList}\small\item\em Checks if the processor is ready to process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMidasEventProcessor_a20012d6c8e3288a988192a75e18cdf87}\label{classMidasEventProcessor_a20012d6c8e3288a988192a75e18cdf87}} 
+\index{MidasEventProcessor@{MidasEventProcessor}!getProcessedOutput@{getProcessedOutput}}
+\index{getProcessedOutput@{getProcessedOutput}!MidasEventProcessor@{MidasEventProcessor}}
+\doxysubsubsection{\texorpdfstring{getProcessedOutput()}{getProcessedOutput()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Midas\+Event\+Processor\+::get\+Processed\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the processed output as a vector of strings. 
+
+\begin{DoxyReturn}{Returns}
+Vector of strings representing the processed output.
+\end{DoxyReturn}
+The vector of strings is added to the circular buffer to be published. So an array of length 2 will add 2 entries to the circular buffer, for example. Empty arrays will not be added to the circular buffer and will therefore not but published. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac25327015ff4e08b1b195e08ca5c551e}{General\+Processor}}.
+
+\mbox{\Hypertarget{classMidasEventProcessor_a35ec058470f1a78ec805d8193587050e}\label{classMidasEventProcessor_a35ec058470f1a78ec805d8193587050e}} 
+\index{MidasEventProcessor@{MidasEventProcessor}!isReadyToProcess@{isReadyToProcess}}
+\index{isReadyToProcess@{isReadyToProcess}!MidasEventProcessor@{MidasEventProcessor}}
+\doxysubsubsection{\texorpdfstring{isReadyToProcess()}{isReadyToProcess()}}
+{\footnotesize\ttfamily bool Midas\+Event\+Processor\+::is\+Ready\+To\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the processor is ready to process. 
+
+\begin{DoxyReturn}{Returns}
+True if ready to process, false otherwise.
+\end{DoxyReturn}
+get\+Processed\+Output will not be called unless this is true. By default, this method always returns true. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classDataChannelProcessesManager_a63090b1f8218f4b59dee4e0ecfa5f3da}{Data\+Channel\+Processes\+Manager\+::run\+Processes()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralProcessor_ac6795bb2b996d8e5b09ed998a553c8e5}{General\+Processor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/processors/Midas\+Event\+Processor.\+h\item 
+src/processors/Midas\+Event\+Processor.\+cpp\end{DoxyCompactItemize}

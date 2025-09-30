@@ -1,0 +1,150 @@
+\hypertarget{classDataTransmitterManager}{}\doxysection{Data\+Transmitter\+Manager Class Reference}
+\label{classDataTransmitterManager}\index{DataTransmitterManager@{DataTransmitterManager}}
+
+
+Manages data transmitters for different zmq-\/addresses.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Transmitter\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataTransmitterManager_aee84224a0c1e39db1ea97003fd589e1c}\label{classDataTransmitterManager_aee84224a0c1e39db1ea97003fd589e1c}} 
+\mbox{\hyperlink{classDataTransmitterManager_aee84224a0c1e39db1ea97003fd589e1c}{Data\+Transmitter\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDataTransmitterManager_a5ed7c0dca4e77b51170bfe8859b49b3a}{Data\+Transmitter\+Manager}} (int verbose=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}} with verbosity control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataTransmitterManager_aa5a21b00a9d6ecca1a3d99c7b91658a2}\label{classDataTransmitterManager_aa5a21b00a9d6ecca1a3d99c7b91658a2}} 
+\mbox{\hyperlink{classDataTransmitterManager_aa5a21b00a9d6ecca1a3d99c7b91658a2}{$\sim$\+Data\+Transmitter\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataTransmitterManager_af5b0323ec99b074c47c01b10ad6399d3}{add\+Zmq\+Address}} (const std\+::string \&zmq\+Address)
+\begin{DoxyCompactList}\small\item\em Adds a new zmq-\/address and creates a \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} for it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataTransmitterManager_a899a8ed901e0351c0d287735d975c59e}{set\+Zmq\+Address}} (const std\+::string \&zmq\+Address, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} $>$ transmitter)
+\begin{DoxyCompactList}\small\item\em Adds a new zmq-\/address or edits an existing one with a provided \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} $>$ \mbox{\hyperlink{classDataTransmitterManager_af0954c723fd9d7716e62725366c559fd}{get\+Transmitter}} (const std\+::string \&zmq\+Address)
+\begin{DoxyCompactList}\small\item\em Gets a \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} for a specified zmq-\/address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataTransmitterManager_ab1668356e2eef3e79a94969e05ed4a9d}{set\+Verbose}} (int enable\+Verbose)
+\begin{DoxyCompactList}\small\item\em Sets the verbosity level for logging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}} \& \mbox{\hyperlink{classDataTransmitterManager_afc830e6741c03764384d73d927778b02}{Instance}} (int verbose=0)
+\begin{DoxyCompactList}\small\item\em Static method to get the singleton instance of \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages data transmitters for different zmq-\/addresses. 
+
+The {\ttfamily \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}} class is responsible for managing and providing access to data transmitters associated with specific zmq-\/addresses. It is designed as a singleton. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataTransmitterManager_a5ed7c0dca4e77b51170bfe8859b49b3a}\label{classDataTransmitterManager_a5ed7c0dca4e77b51170bfe8859b49b3a}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!DataTransmitterManager@{DataTransmitterManager}}
+\index{DataTransmitterManager@{DataTransmitterManager}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{DataTransmitterManager()}{DataTransmitterManager()}}
+{\footnotesize\ttfamily Data\+Transmitter\+Manager\+::\+Data\+Transmitter\+Manager (\begin{DoxyParamCaption}\item[{int}]{verbose = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}} with verbosity control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & Verbosity level for logging (default is 0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataTransmitterManager_af5b0323ec99b074c47c01b10ad6399d3}\label{classDataTransmitterManager_af5b0323ec99b074c47c01b10ad6399d3}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!addZmqAddress@{addZmqAddress}}
+\index{addZmqAddress@{addZmqAddress}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{addZmqAddress()}{addZmqAddress()}}
+{\footnotesize\ttfamily void Data\+Transmitter\+Manager\+::add\+Zmq\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{zmq\+Address }\end{DoxyParamCaption})}
+
+
+
+Adds a new zmq-\/address and creates a \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} for it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zmq\+Address} & The zmq-\/address to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataTransmitterManager_af0954c723fd9d7716e62725366c559fd}\label{classDataTransmitterManager_af0954c723fd9d7716e62725366c559fd}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!getTransmitter@{getTransmitter}}
+\index{getTransmitter@{getTransmitter}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{getTransmitter()}{getTransmitter()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} $>$ Data\+Transmitter\+Manager\+::get\+Transmitter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{zmq\+Address }\end{DoxyParamCaption})}
+
+
+
+Gets a \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} for a specified zmq-\/address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zmq\+Address} & The zmq-\/address for which to retrieve the \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} associated with the zmq-\/address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataTransmitterManager_afc830e6741c03764384d73d927778b02}\label{classDataTransmitterManager_afc830e6741c03764384d73d927778b02}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!Instance@{Instance}}
+\index{Instance@{Instance}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{Instance()}{Instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}} \& Data\+Transmitter\+Manager\+::\+Instance (\begin{DoxyParamCaption}\item[{int}]{verbose = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method to get the singleton instance of \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & Verbosity level for logging (default is 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the singleton instance of \mbox{\hyperlink{classDataTransmitterManager}{Data\+Transmitter\+Manager}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataTransmitterManager_ab1668356e2eef3e79a94969e05ed4a9d}\label{classDataTransmitterManager_ab1668356e2eef3e79a94969e05ed4a9d}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!setVerbose@{setVerbose}}
+\index{setVerbose@{setVerbose}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{setVerbose()}{setVerbose()}}
+{\footnotesize\ttfamily void Data\+Transmitter\+Manager\+::set\+Verbose (\begin{DoxyParamCaption}\item[{int}]{enable\+Verbose }\end{DoxyParamCaption})}
+
+
+
+Sets the verbosity level for logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+Verbose} & Verbosity level to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataTransmitterManager_a899a8ed901e0351c0d287735d975c59e}\label{classDataTransmitterManager_a899a8ed901e0351c0d287735d975c59e}} 
+\index{DataTransmitterManager@{DataTransmitterManager}!setZmqAddress@{setZmqAddress}}
+\index{setZmqAddress@{setZmqAddress}!DataTransmitterManager@{DataTransmitterManager}}
+\doxysubsubsection{\texorpdfstring{setZmqAddress()}{setZmqAddress()}}
+{\footnotesize\ttfamily void Data\+Transmitter\+Manager\+::set\+Zmq\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{zmq\+Address,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} $>$}]{transmitter }\end{DoxyParamCaption})}
+
+
+
+Adds a new zmq-\/address or edits an existing one with a provided \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em zmq\+Address} & The zmq-\/address to set or add. \\
+\hline
+{\em transmitter} & The \mbox{\hyperlink{classDataTransmitter}{Data\+Transmitter}} associated with the zmq-\/address. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/data\+\_\+transmitter/Data\+Transmitter\+Manager.\+h\item 
+src/data\+\_\+transmitter/Data\+Transmitter\+Manager.\+cpp\end{DoxyCompactItemize}
